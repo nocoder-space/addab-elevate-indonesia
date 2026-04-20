@@ -46,54 +46,69 @@ const testimonials = [
 const Index = () => {
   return (
     <>
-      {/* HERO — editorial, full-width, no photo card */}
-      <section className="relative min-h-[92vh] flex items-center pt-32 pb-20 overflow-hidden bg-gradient-hero">
-        <div className="absolute inset-0 opacity-[0.05] mix-blend-screen" style={{ backgroundImage: `url(${patternBg})`, backgroundSize: "cover" }} />
-        <div className="absolute top-0 right-0 w-[700px] h-[700px] bg-gradient-radial-gold blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[900px] h-[400px] bg-gradient-radial-gold blur-3xl opacity-50 pointer-events-none" />
+      {/* HERO — full-bleed cinematic photo with left-aligned copy that protects subject */}
+      <section className="relative min-h-[92vh] flex items-center pt-28 pb-16 overflow-hidden bg-background">
+        <div className="absolute inset-0">
+          <img
+            src={heroImg}
+            alt="Faisal Maulana — People Development Expert Indonesia"
+            className="w-full h-full object-cover object-[75%_center] md:object-[68%_center]"
+            width={1920}
+            height={1280}
+            fetchPriority="high"
+          />
+          {/* Left-to-right fade keeps text legible while preserving subject on the right */}
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 md:via-background/65 to-background/5" />
+          <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-background to-transparent" />
+          <div className="absolute -left-32 top-1/3 w-[500px] h-[500px] bg-primary/15 blur-3xl rounded-full" />
+        </div>
 
-        <div className="container-tight relative text-center reveal">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/5 mb-8">
-            <Sparkles className="w-3.5 h-3.5 text-primary" />
-            <span className="text-xs uppercase tracking-[0.25em] text-primary font-medium">ADDIE + Adab — People Development Framework</span>
-          </div>
-
-          <h1 className="font-serif text-5xl md:text-7xl lg:text-[5.5rem] leading-[1.02] font-medium text-foreground max-w-5xl mx-auto">
-            Mengubah <span className="italic text-gradient-gold">potensi manusia</span> menjadi performa bisnis yang terukur.
-          </h1>
-
-          <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Saya membantu perusahaan Indonesia membangun manusia — bukan sekadar melatih karyawan. Memadukan instructional design (ADDIE), experiential learning, dan nilai humanis Islami untuk transformasi yang berakhlak dan berdampak.
-          </p>
-
-          <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-gold h-14 px-8 text-base font-semibold">
-              <Link to="/contact">Konsultasi Gratis <ArrowRight className="ml-2 w-4 h-4" /></Link>
-            </Button>
-            <Button asChild variant="outline" size="lg" className="h-14 px-8 text-base border-foreground/20 hover:border-primary hover:bg-primary/5">
-              <Link to="/academy">Jelajahi Academy</Link>
-            </Button>
-          </div>
-
-          <div className="mt-14 grid grid-cols-3 gap-6 max-w-2xl mx-auto pt-10 border-t border-border/60">
-            {[
-              { n: "18+", l: "Tahun pengalaman" },
-              { n: "200+", l: "Korporasi & institusi" },
-              { n: "100K+", l: "Peserta terlatih" },
-            ].map(s => (
-              <div key={s.l}>
-                <div className="font-serif text-3xl md:text-5xl text-gradient-gold">{s.n}</div>
-                <div className="text-[11px] md:text-xs uppercase tracking-wider text-muted-foreground mt-2">{s.l}</div>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-10 inline-flex items-center gap-3 text-sm text-muted-foreground">
-            <div className="flex">
-              {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-primary text-primary" />)}
+        <div className="container-wide relative grid lg:grid-cols-12 gap-8 items-center">
+          <div className="lg:col-span-7 xl:col-span-6 reveal">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/40 bg-background/60 backdrop-blur-sm mb-7">
+              <Sparkles className="w-3.5 h-3.5 text-primary" />
+              <span className="text-[11px] uppercase tracking-[0.25em] text-primary font-semibold">ADDIE + Adab Framework</span>
             </div>
-            <span>4.9 / 5 — dari evaluasi 23.000+ peserta korporasi</span>
+
+            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-[4.25rem] leading-[1.04] font-medium text-foreground">
+              Mengubah <span className="italic text-gradient-gold">potensi manusia</span> menjadi performa bisnis yang terukur.
+            </h1>
+
+            <p className="mt-6 text-base md:text-lg text-foreground/80 max-w-xl leading-relaxed">
+              Saya membantu perusahaan Indonesia membangun manusia — bukan sekadar melatih karyawan. Memadukan instructional design, experiential learning, dan nilai humanis Islami untuk transformasi yang berakhlak dan berdampak.
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-gold h-13 px-7 font-semibold">
+                <Link to="/contact">Konsultasi Gratis <ArrowRight className="ml-2 w-4 h-4" /></Link>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="h-13 px-7 border-foreground/25 bg-background/40 backdrop-blur-sm hover:border-primary hover:bg-primary/10">
+                <Link to="/academy">Jelajahi Academy</Link>
+              </Button>
+            </div>
+
+            <div className="mt-10 grid grid-cols-3 gap-4 max-w-lg pt-6 border-t border-border/60">
+              {[
+                { n: "18+", l: "Tahun pengalaman" },
+                { n: "200+", l: "Korporasi & institusi" },
+                { n: "100K+", l: "Peserta terlatih" },
+              ].map(s => (
+                <div key={s.l}>
+                  <div className="font-serif text-2xl md:text-4xl text-gradient-gold">{s.n}</div>
+                  <div className="text-[10px] md:text-xs uppercase tracking-wider text-muted-foreground mt-1.5">{s.l}</div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-6 inline-flex items-center gap-2.5 text-xs md:text-sm text-muted-foreground">
+              <div className="flex">
+                {[...Array(5)].map((_, i) => <Star key={i} className="w-3.5 h-3.5 fill-primary text-primary" />)}
+              </div>
+              <span>4.9 / 5 — dari 23.000+ peserta korporasi</span>
+            </div>
           </div>
+
+          <div className="hidden lg:block lg:col-span-5 xl:col-span-6" />
         </div>
       </section>
 
