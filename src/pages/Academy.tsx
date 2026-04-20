@@ -43,55 +43,73 @@ const Academy = () => {
 
   return (
     <>
-      {/* HERO — energetic, conversion-driven */}
-      <section className="relative pt-36 pb-16 bg-surface-light text-surface-light-foreground overflow-hidden">
-        <div className="absolute top-20 right-10 w-96 h-96 bg-signal/30 blur-3xl rounded-full" />
-        <div className="absolute bottom-0 left-0 w-72 h-72 bg-primary/20 blur-3xl rounded-full" />
-        <div className="container-wide relative">
-          <div className="max-w-4xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-signal/20 border border-signal/40 mb-6">
-              <Crown className="w-3.5 h-3.5 text-surface-light-foreground" />
-              <span className="text-xs uppercase tracking-[0.2em] font-semibold">Faisal Maulana Academy</span>
+      {/* HERO — premium dark, conversion-focused */}
+      <section className="relative pt-36 pb-20 overflow-hidden bg-gradient-hero">
+        <div className="absolute top-20 right-0 w-[600px] h-[600px] bg-gradient-radial-gold blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/10 blur-3xl rounded-full pointer-events-none" />
+
+        <div className="container-wide relative grid lg:grid-cols-12 gap-12 items-center">
+          <div className="lg:col-span-7 reveal">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/10 mb-6">
+              <Crown className="w-3.5 h-3.5 text-primary" />
+              <span className="text-xs uppercase tracking-[0.25em] text-primary font-semibold">Faisal Maulana Academy</span>
             </div>
-            <h1 className="font-serif text-5xl md:text-7xl leading-[1.05] font-medium">
-              Belajar people development <em className="italic text-foreground/70">dari praktisi korporasi</em>, langsung dari rumah Anda.
+            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.05] font-medium text-foreground">
+              Pengetahuan korporasi, <span className="italic text-gradient-gold">untuk siapa saja</span> yang ingin bertumbuh.
             </h1>
-            <p className="mt-6 text-lg text-surface-light-foreground/70 max-w-2xl">
-              E-book, online course, webinar live, dan membership eksklusif — dengan kualitas yang sama seperti program in-house korporasi kami.
+            <p className="mt-6 text-lg text-muted-foreground max-w-xl leading-relaxed">
+              E-book, online course, webinar live, dan membership eksklusif — disusun dengan kualitas yang sama seperti program in-house yang kami berikan untuk korporasi nasional.
             </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Button size="lg" className="bg-signal text-signal-foreground hover:bg-signal/90 h-14 px-7 font-semibold">
+            <div className="mt-9 flex flex-wrap gap-4">
+              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-gold h-14 px-8 font-semibold">
                 Telusuri Semua Produk <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
-              <Button size="lg" variant="outline" className="h-14 px-7 border-surface-light-foreground/30 text-surface-light-foreground hover:bg-surface-light-foreground/5">
+              <Button size="lg" variant="outline" className="h-14 px-8 border-foreground/20 hover:border-primary hover:bg-primary/5">
                 Gabung Membership
               </Button>
             </div>
-            <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm">
+            <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-muted-foreground">
               <div className="flex items-center gap-2"><Check className="w-4 h-4 text-primary" /> Akses seumur hidup</div>
               <div className="flex items-center gap-2"><Check className="w-4 h-4 text-primary" /> Sertifikat resmi</div>
-              <div className="flex items-center gap-2"><Check className="w-4 h-4 text-primary" /> Garansi 7 hari uang kembali</div>
+              <div className="flex items-center gap-2"><Check className="w-4 h-4 text-primary" /> Garansi 7 hari</div>
+            </div>
+          </div>
+
+          <div className="lg:col-span-5 reveal reveal-delay-2">
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                { icon: BookOpen, n: "30+", l: "E-book & panduan" },
+                { icon: Video, n: "12", l: "Online course" },
+                { icon: Users, n: "12K+", l: "Student aktif" },
+                { icon: Award, n: "4.9/5", l: "Rating produk" },
+              ].map((s, i) => (
+                <div key={i} className="card-premium p-6">
+                  <s.icon className="w-6 h-6 text-primary mb-4" />
+                  <div className="font-serif text-3xl md:text-4xl text-gradient-gold">{s.n}</div>
+                  <div className="text-xs uppercase tracking-wider text-muted-foreground mt-2">{s.l}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
       {/* WEBINAR COUNTDOWN */}
-      <section className="bg-foreground text-background py-12">
+      <section className="bg-card border-y border-border py-10">
         <div className="container-wide flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <div className="text-xs uppercase tracking-[0.2em] text-signal mb-2">Webinar Live Berikutnya</div>
+            <div className="text-xs uppercase tracking-[0.25em] text-primary mb-2 font-semibold">Webinar Live Berikutnya</div>
             <h3 className="font-serif text-2xl md:text-3xl">Membangun Tim High-Performance dengan Nilai Adab</h3>
-            <p className="text-sm opacity-70 mt-1">Hanya untuk 100 peserta pertama • Rp 299.000</p>
+            <p className="text-sm text-muted-foreground mt-1">Hanya untuk 100 peserta pertama • Rp 299.000</p>
           </div>
           <div className="flex items-center gap-3">
             {[{n:days,l:"Hari"},{n:hours,l:"Jam"},{n:mins,l:"Menit"}].map(x => (
-              <div key={x.l} className="bg-background/10 border border-background/20 rounded-xl px-5 py-3 text-center min-w-[80px]">
-                <div className="font-serif text-3xl text-signal">{String(x.n).padStart(2,'0')}</div>
-                <div className="text-[10px] uppercase tracking-wider opacity-60">{x.l}</div>
+              <div key={x.l} className="bg-background border border-border rounded-xl px-5 py-3 text-center min-w-[80px]">
+                <div className="font-serif text-3xl text-primary">{String(x.n).padStart(2,'0')}</div>
+                <div className="text-[10px] uppercase tracking-wider text-muted-foreground">{x.l}</div>
               </div>
             ))}
-            <Button size="lg" className="bg-signal text-signal-foreground hover:bg-signal/90 h-14 ml-2 font-semibold">Daftar</Button>
+            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 h-14 ml-2 font-semibold shadow-gold">Daftar</Button>
           </div>
         </div>
       </section>

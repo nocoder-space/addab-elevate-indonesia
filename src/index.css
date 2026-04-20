@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&family=Amiri:wght@400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,71 +6,71 @@
 
 @layer base {
   :root {
-    /* Faisal Maulana — Premium Islamic Humanist Brand */
-    --background: 230 25% 5%;
-    --foreground: 38 30% 94%;
+    /* Faisal Maulana — Sophisticated Warm Moody
+       BG #121111 • Card #2D241E • Primary #F7941D • Accent #B87B42 • Text #E8E2D9 */
+    --background: 0 3% 7%;
+    --foreground: 36 27% 88%;
 
-    --card: 230 22% 8%;
-    --card-foreground: 38 30% 94%;
+    --card: 22 21% 15%;
+    --card-foreground: 36 27% 88%;
 
-    --popover: 230 25% 6%;
-    --popover-foreground: 38 30% 94%;
+    --popover: 22 21% 12%;
+    --popover-foreground: 36 27% 88%;
 
-    /* Gold Bronze — primary accent */
-    --primary: 28 45% 60%;
-    --primary-foreground: 230 30% 6%;
+    /* Vibrant Orange — primary CTA */
+    --primary: 30 93% 54%;
+    --primary-foreground: 0 3% 7%;
 
-    /* Olive Islamic — sophistication */
-    --secondary: 130 8% 40%;
-    --secondary-foreground: 38 30% 94%;
+    /* Warm Espresso — secondary surface */
+    --secondary: 22 21% 15%;
+    --secondary-foreground: 36 27% 88%;
 
-    --muted: 230 15% 14%;
-    --muted-foreground: 38 12% 68%;
+    --muted: 22 15% 13%;
+    --muted-foreground: 36 12% 65%;
 
-    /* Saffron — energy / conversion */
-    --accent: 32 88% 67%;
-    --accent-foreground: 230 30% 6%;
+    /* Amber — accent / highlights */
+    --accent: 28 47% 49%;
+    --accent-foreground: 0 3% 7%;
 
-    /* Signal yellow — urgency / academy */
-    --signal: 48 100% 60%;
-    --signal-foreground: 230 30% 6%;
+    /* Signal — featured products / urgency (warm amber-orange) */
+    --signal: 30 93% 54%;
+    --signal-foreground: 0 3% 7%;
 
     --destructive: 0 70% 55%;
-    --destructive-foreground: 38 30% 94%;
+    --destructive-foreground: 36 27% 88%;
 
-    --border: 230 18% 16%;
-    --input: 230 18% 14%;
-    --ring: 28 45% 60%;
+    --border: 22 18% 18%;
+    --input: 22 18% 14%;
+    --ring: 30 93% 54%;
 
     --radius: 0.75rem;
 
     /* Surfaces */
-    --surface-elevated: 230 22% 10%;
-    --surface-light: 38 30% 96%;
-    --surface-light-foreground: 230 30% 8%;
+    --surface-elevated: 22 21% 17%;
+    --surface-light: 36 27% 92%;
+    --surface-light-foreground: 0 3% 7%;
 
     /* Gradients */
-    --gradient-hero: radial-gradient(ellipse at top right, hsl(28 45% 18% / 0.4), transparent 60%), linear-gradient(180deg, hsl(230 25% 5%), hsl(230 28% 7%));
-    --gradient-gold: linear-gradient(135deg, hsl(28 55% 65%), hsl(32 70% 55%));
-    --gradient-card: linear-gradient(160deg, hsl(230 22% 10% / 0.9), hsl(230 22% 7% / 0.9));
-    --gradient-radial-gold: radial-gradient(ellipse at center, hsl(28 45% 60% / 0.18), transparent 70%);
+    --gradient-hero: radial-gradient(ellipse at top right, hsl(30 93% 30% / 0.28), transparent 60%), linear-gradient(180deg, hsl(0 3% 7%), hsl(22 12% 9%));
+    --gradient-gold: linear-gradient(135deg, hsl(30 93% 58%), hsl(28 75% 45%));
+    --gradient-card: linear-gradient(160deg, hsl(22 21% 16% / 0.95), hsl(22 18% 11% / 0.95));
+    --gradient-radial-gold: radial-gradient(ellipse at center, hsl(30 93% 54% / 0.18), transparent 70%);
 
     /* Shadows */
-    --shadow-elegant: 0 24px 60px -20px hsl(0 0% 0% / 0.6);
-    --shadow-gold: 0 20px 50px -15px hsl(28 45% 50% / 0.45);
-    --shadow-card: 0 12px 32px -12px hsl(0 0% 0% / 0.5);
+    --shadow-elegant: 0 24px 60px -20px hsl(0 0% 0% / 0.7);
+    --shadow-gold: 0 20px 50px -15px hsl(30 93% 40% / 0.45);
+    --shadow-card: 0 12px 32px -12px hsl(0 0% 0% / 0.6);
 
-    /* Motion */
     --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
 
-    --sidebar-background: 230 25% 5%;
-    --sidebar-foreground: 38 30% 94%;
-    --sidebar-primary: 28 45% 60%;
-    --sidebar-primary-foreground: 230 30% 6%;
-    --sidebar-accent: 230 18% 12%;
-    --sidebar-accent-foreground: 38 30% 94%;
-    --sidebar-border: 230 18% 16%;
-    --sidebar-ring: 28 45% 60%;
+    --sidebar-background: 0 3% 7%;
+    --sidebar-foreground: 36 27% 88%;
+    --sidebar-primary: 30 93% 54%;
+    --sidebar-primary-foreground: 0 3% 7%;
+    --sidebar-accent: 22 21% 15%;
+    --sidebar-accent-foreground: 36 27% 88%;
+    --sidebar-border: 22 18% 18%;
+    --sidebar-ring: 30 93% 54%;
   }
 }
 
@@ -83,12 +83,16 @@
   }
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'Inter', 'Montserrat', system-ui, sans-serif;
     font-feature-settings: 'ss01', 'cv11';
   }
   h1, h2, h3, h4, .font-serif {
     font-family: 'Fraunces', Georgia, serif;
     letter-spacing: -0.02em;
+  }
+  .font-display {
+    font-family: 'Montserrat', 'Inter', system-ui, sans-serif;
+    letter-spacing: -0.01em;
   }
   .font-arabic {
     font-family: 'Amiri', serif;

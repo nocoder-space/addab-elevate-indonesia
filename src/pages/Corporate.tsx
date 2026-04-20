@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle2, AlertTriangle, Target, Users, Building2, Briefcase, TrendingUp, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import workshopImg from "@/assets/corporate-workshop.jpg";
-import consultationImg from "@/assets/consultation.jpg";
+import workshopImg from "@/assets/faisal-credentials.jpg";
+import consultationImg from "@/assets/faisal-corporate.jpg";
 
 const painPoints = [
   { title: "Training tanpa diagnosa", desc: "Program dibeli berdasarkan tren, bukan kebutuhan riil organisasi — sehingga dampaknya cepat hilang." },
