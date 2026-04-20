@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowUpRight, CheckCircle2, Star, Sparkles, Users, Building2, Award, Target, Lightbulb, Rocket, BarChart3, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImg from "@/assets/faisal-hero-scene.png";
-import portraitImg from "@/assets/faisal-portrait.png";
-import workshopImg from "@/assets/corporate-workshop.jpg";
+import heroImg from "@/assets/faisal-hero.jpg";
+import portraitImg from "@/assets/faisal-profile.jpg";
+import workshopImg from "@/assets/faisal-corporate.jpg";
 import ebookImg from "@/assets/ebook-mockup.jpg";
 import courseImg from "@/assets/course-mockup.jpg";
 import webinarImg from "@/assets/webinar-mockup.jpg";
