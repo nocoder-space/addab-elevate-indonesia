@@ -12,6 +12,13 @@ import t2 from "@/assets/testimonial-2.jpg";
 import t3 from "@/assets/testimonial-3.jpg";
 import patternBg from "@/assets/pattern-bg.jpg";
 import methodologyBg from "@/assets/methodology-bg.jpg";
+import galleryA from "@/assets/event-propertypro.webp";
+import galleryB from "@/assets/event-corporate-training.webp";
+import galleryC from "@/assets/event-leadership-workshop.webp";
+import galleryD from "@/assets/event-capacity-building.webp";
+import galleryE from "@/assets/event-ballroom.webp";
+import philosophyBg from "@/assets/event-group-photo.webp";
+import servicesBg from "@/assets/event-engagement-class.webp";
 
 const trustBadges = ["Perbankan", "Asuransi", "BUMN", "Telekomunikasi", "FMCG", "Kementerian", "Energi", "Manufaktur"];
 
