@@ -1,15 +1,16 @@
 import { Calendar, MapPin, Users, ArrowRight, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import workshopImg from "@/assets/corporate-workshop.jpg";
-import webinarImg from "@/assets/webinar-mockup.jpg";
-import trainingImg from "@/assets/training-stage.jpg";
+import workshopImg from "@/assets/event-corporate-training.webp";
+import webinarImg from "@/assets/event-engagement-class.webp";
+import trainingImg from "@/assets/event-leadership-workshop.webp";
+import bootcampImg from "@/assets/event-capacity-building.webp";
 
 const events = [
   { type: "Webinar Live", img: webinarImg, title: "Membangun Tim High-Performance dengan Nilai Adab", date: "7 Mei 2026", time: "19:30 WIB", location: "Online via Zoom", seats: "100 peserta", price: "Rp 299.000", featured: true },
   { type: "Public Workshop", img: workshopImg, title: "Sales & Marketing Champion — Public Class Jakarta", date: "22-23 Mei 2026", time: "09:00 – 17:00 WIB", location: "Hotel Mulia Senayan, Jakarta", seats: "30 peserta", price: "Rp 4.500.000", featured: false },
-  { type: "Webinar Live", img: webinarImg, title: "Strategi People Development untuk Startup Bertumbuh", date: "12 Juni 2026", time: "20:00 WIB", location: "Online via Zoom", seats: "200 peserta", price: "Rp 199.000", featured: false },
-  { type: "Public Workshop", img: trainingImg, title: "Transformational Leadership Bootcamp", date: "5-7 Juli 2026", time: "Full day", location: "Bandung", seats: "25 peserta", price: "Rp 7.500.000", featured: false },
+  { type: "Webinar Live", img: trainingImg, title: "Strategi People Development untuk Startup Bertumbuh", date: "12 Juni 2026", time: "20:00 WIB", location: "Online via Zoom", seats: "200 peserta", price: "Rp 199.000", featured: false },
+  { type: "Public Workshop", img: bootcampImg, title: "Transformational Leadership Bootcamp", date: "5-7 Juli 2026", time: "Full day", location: "Bandung", seats: "25 peserta", price: "Rp 7.500.000", featured: false },
 ];
 
 const Events = () => (
