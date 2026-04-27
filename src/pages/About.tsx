@@ -54,8 +54,12 @@ const About = () => (
     </section>
 
     {/* NARRATIVE */}
-    <section className="section-padding">
-      <div className="container-tight prose prose-invert max-w-3xl">
+    <section className="section-padding relative overflow-hidden">
+      <div className="absolute inset-0 -z-10">
+        <img src={narrativeBg} alt="" aria-hidden="true" className="w-full h-full object-cover opacity-[0.12]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/90 to-background" />
+      </div>
+      <div className="container-tight prose prose-invert max-w-3xl relative">
         <div className="eyebrow mb-3 not-prose">Cerita di Balik Karya</div>
         <h2 className="font-serif text-4xl md:text-5xl leading-tight not-prose mb-8">Mengapa saya memilih jalan ini.</h2>
         <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
@@ -68,8 +72,11 @@ const About = () => (
     </section>
 
     {/* TIMELINE */}
-    <section className="section-padding bg-card/30 border-y border-border/60">
-      <div className="container-wide">
+    <section className="section-padding bg-card/30 border-y border-border/60 relative overflow-hidden">
+      <div className="absolute inset-0 -z-10 opacity-[0.08]">
+        <img src={timelineBg} alt="" aria-hidden="true" className="w-full h-full object-cover" />
+      </div>
+      <div className="container-wide relative">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <div className="eyebrow mb-3">Perjalanan</div>
           <h2 className="font-serif text-4xl md:text-5xl">Tonggak yang membentuk pendekatan ini.</h2>
