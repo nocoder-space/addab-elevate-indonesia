@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoFaisal from "@/assets/logo-faisal.webp";
 
 const links = [
   { to: "/", label: "Beranda" },
@@ -30,10 +31,14 @@ const Navbar = () => {
   return (
     <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${scrolled ? "glass" : "bg-transparent"}`}>
       <div className="container-wide flex items-center justify-between h-20">
-        <Link to="/" className="flex items-center gap-2 group">
-          <div className="w-9 h-9 rounded-lg bg-gradient-gold flex items-center justify-center font-serif font-bold text-primary-foreground text-lg">
-            F
-          </div>
+        <Link to="/" className="flex items-center gap-3 group">
+          <img
+            src={logoFaisal}
+            alt="Faisal Maulana logo"
+            width={40}
+            height={40}
+            className="w-10 h-10 rounded-full object-contain ring-1 ring-primary/40 shadow-gold transition-transform duration-500 group-hover:scale-105"
+          />
           <div className="leading-tight">
             <div className="font-serif font-semibold text-lg text-foreground">Faisal Maulana</div>
             <div className="text-[10px] uppercase tracking-[0.2em] text-primary">People Development Expert</div>

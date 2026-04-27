@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowUpRight, CheckCircle2, Star, Sparkles, Users, Building2, Award, Target, Lightbulb, Rocket, BarChart3, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ClientLogosMarquee from "@/components/ClientLogosMarquee";
 import heroImg from "@/assets/faisal-hero.jpg";
 import portraitImg from "@/assets/faisal-profile.jpg";
 import workshopImg from "@/assets/faisal-corporate.jpg";
@@ -120,19 +121,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* TRUST BAR */}
-      <section className="border-y border-border/60 py-10 bg-card/40">
-        <div className="container-wide">
-          <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground text-center mb-6">
-            Dipercaya oleh organisasi terkemuka di Indonesia
-          </div>
-          <div className="flex flex-wrap justify-center gap-x-10 gap-y-4">
-            {trustBadges.map(b => (
-              <div key={b} className="text-foreground/50 hover:text-primary transition-colors font-serif text-lg tracking-wide">{b}</div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* TRUST BAR — premium animated client logo marquee */}
+      <ClientLogosMarquee />
 
       {/* PHILOSOPHY */}
       <section className="section-padding relative overflow-hidden">

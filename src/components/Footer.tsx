@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Instagram, Linkedin, Youtube, Mail, MessageCircle } from "lucide-react";
+import logoFaisal from "@/assets/logo-faisal.webp";
 
 const Footer = () => (
   <footer className="border-t border-border/60 bg-background relative overflow-hidden">
@@ -8,7 +9,7 @@ const Footer = () => (
       <div className="grid md:grid-cols-12 gap-10">
         <div className="md:col-span-4">
           <div className="flex items-center gap-2 mb-4">
-            <div className="w-10 h-10 rounded-lg bg-gradient-gold flex items-center justify-center font-serif font-bold text-primary-foreground">F</div>
+            <img src={logoFaisal} alt="Faisal Maulana logo" width={44} height={44} className="w-11 h-11 rounded-full object-contain ring-1 ring-primary/40 shadow-gold" />
             <div>
               <div className="font-serif font-semibold text-lg">Faisal Maulana</div>
               <div className="text-[10px] uppercase tracking-[0.2em] text-primary">People Development Expert</div>
