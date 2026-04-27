@@ -135,7 +135,11 @@ const Index = () => {
       </section>
 
       {/* PHILOSOPHY */}
-      <section className="section-padding relative">
+      <section className="section-padding relative overflow-hidden">
+        <div className="absolute inset-0 -z-10">
+          <img src={philosophyBg} alt="" aria-hidden="true" className="w-full h-full object-cover opacity-20" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/85 to-background" />
+        </div>
         <div className="absolute inset-0 bg-gradient-radial-gold opacity-30 pointer-events-none" />
         <div className="container-tight relative">
           <div className="text-center max-w-3xl mx-auto">
