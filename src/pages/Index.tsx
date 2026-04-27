@@ -12,6 +12,13 @@ import t2 from "@/assets/testimonial-2.jpg";
 import t3 from "@/assets/testimonial-3.jpg";
 import patternBg from "@/assets/pattern-bg.jpg";
 import methodologyBg from "@/assets/methodology-bg.jpg";
+import galleryA from "@/assets/event-propertypro.webp";
+import galleryB from "@/assets/event-corporate-training.webp";
+import galleryC from "@/assets/event-leadership-workshop.webp";
+import galleryD from "@/assets/event-capacity-building.webp";
+import galleryE from "@/assets/event-ballroom.webp";
+import philosophyBg from "@/assets/event-group-photo.webp";
+import servicesBg from "@/assets/event-engagement-class.webp";
 
 const trustBadges = ["Perbankan", "Asuransi", "BUMN", "Telekomunikasi", "FMCG", "Kementerian", "Energi", "Manufaktur"];
 
@@ -128,7 +135,11 @@ const Index = () => {
       </section>
 
       {/* PHILOSOPHY */}
-      <section className="section-padding relative">
+      <section className="section-padding relative overflow-hidden">
+        <div className="absolute inset-0 -z-10">
+          <img src={philosophyBg} alt="" aria-hidden="true" className="w-full h-full object-cover opacity-20" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/85 to-background" />
+        </div>
         <div className="absolute inset-0 bg-gradient-radial-gold opacity-30 pointer-events-none" />
         <div className="container-tight relative">
           <div className="text-center max-w-3xl mx-auto">
@@ -193,7 +204,11 @@ const Index = () => {
       </section>
 
       {/* SERVICES */}
-      <section className="section-padding">
+      <section className="section-padding relative overflow-hidden">
+        <div className="absolute inset-0 -z-10">
+          <img src={servicesBg} alt="" aria-hidden="true" className="w-full h-full object-cover opacity-[0.12]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/90 to-background" />
+        </div>
         <div className="container-wide">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <div className="eyebrow mb-3">Program Korporasi</div>
@@ -246,6 +261,30 @@ const Index = () => {
                     <Button size="sm" className="bg-signal text-signal-foreground hover:bg-signal/90 font-semibold">Beli</Button>
                   </div>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* GALLERY — Momen di Lapangan */}
+      <section className="section-padding border-y border-border/60 bg-card/20">
+        <div className="container-wide">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <div className="eyebrow mb-3">Momen di Lapangan</div>
+            <h2 className="font-serif text-4xl md:text-5xl leading-tight">Dari ruang kelas korporasi hingga panggung nasional.</h2>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4">
+            {[
+              { src: galleryB, alt: "Sesi pelatihan korporasi yang interaktif" },
+              { src: galleryA, alt: "Keynote speaker di event PropertyPro" },
+              { src: galleryC, alt: "Workshop leadership dan organisasi" },
+              { src: galleryD, alt: "Capacity building outdoor" },
+              { src: galleryE, alt: "Pelatihan profesional di ballroom" },
+            ].map((g, i) => (
+              <div key={i} className={`relative overflow-hidden rounded-2xl border border-border/60 group ${i === 0 ? "col-span-2 row-span-2 lg:col-span-2 lg:row-span-2 aspect-square" : "aspect-square"}`}>
+                <img src={g.src} alt={g.alt} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
               </div>
             ))}
           </div>

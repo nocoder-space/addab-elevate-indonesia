@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle2, AlertTriangle, Target, Users, Building2, Briefcase, TrendingUp, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import workshopImg from "@/assets/faisal-credentials.jpg";
-import consultationImg from "@/assets/faisal-corporate.jpg";
+import workshopImg from "@/assets/event-corporate-training.webp";
+import consultationImg from "@/assets/event-group-photo.webp";
+import painBg from "@/assets/event-roleplay.webp";
+import processBg from "@/assets/event-leadership-workshop.webp";
 
 const painPoints = [
   { title: "Training tanpa diagnosa", desc: "Program dibeli berdasarkan tren, bukan kebutuhan riil organisasi — sehingga dampaknya cepat hilang." },
@@ -60,8 +62,12 @@ const Corporate = () => (
     </section>
 
     {/* PAIN POINTS */}
-    <section className="section-padding border-y border-border/60 bg-card/30">
-      <div className="container-wide">
+    <section className="section-padding border-y border-border/60 bg-card/30 relative overflow-hidden">
+      <div className="absolute inset-0 -z-10 opacity-[0.10]">
+        <img src={painBg} alt="" aria-hidden="true" className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-transparent to-background/80" />
+      </div>
+      <div className="container-wide relative">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <div className="eyebrow mb-3">Mengapa Banyak Program Gagal</div>
           <h2 className="font-serif text-4xl md:text-5xl">Tiga jebakan yang membuat investasi training menguap.</h2>
@@ -165,8 +171,12 @@ const Corporate = () => (
     </section>
 
     {/* PROCESS */}
-    <section className="section-padding bg-card/30 border-y border-border/60">
-      <div className="container-wide">
+    <section className="section-padding bg-card/30 border-y border-border/60 relative overflow-hidden">
+      <div className="absolute inset-0 -z-10 opacity-[0.10]">
+        <img src={processBg} alt="" aria-hidden="true" className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-transparent to-background/85" />
+      </div>
+      <div className="container-wide relative">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <div className="eyebrow mb-3">Cara Kami Bekerja</div>
           <h2 className="font-serif text-4xl md:text-5xl">Lima tahap dari diskusi awal hingga laporan dampak.</h2>

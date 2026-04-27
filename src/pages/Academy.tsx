@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import ebookImg from "@/assets/ebook-mockup.jpg";
 import courseImg from "@/assets/course-mockup.jpg";
 import webinarImg from "@/assets/webinar-mockup.jpg";
+import socialBg from "@/assets/event-ballroom.webp";
+import membershipBg from "@/assets/event-roleplay.webp";
 
 const products = [
   { type: "E-book", img: ebookImg, title: "ADDIE + Adab: Panduan People Development", who: "HR, L&D, founder", outcome: "Kerangka kerja siap pakai dalam 5 jam baca", price: "Rp 149.000", featured: false },
@@ -155,8 +157,12 @@ const Academy = () => {
       </section>
 
       {/* MEMBERSHIP */}
-      <section className="section-padding bg-card/40 border-y border-border/60">
-        <div className="container-wide">
+      <section className="section-padding bg-card/40 border-y border-border/60 relative overflow-hidden">
+        <div className="absolute inset-0 -z-10 opacity-[0.10]">
+          <img src={membershipBg} alt="" aria-hidden="true" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-transparent to-background/80" />
+        </div>
+        <div className="container-wide relative">
           <div className="grid lg:grid-cols-12 gap-10">
             <div className="lg:col-span-5">
               <div className="eyebrow mb-3">Inner Circle</div>
@@ -190,8 +196,12 @@ const Academy = () => {
       </section>
 
       {/* SOCIAL PROOF */}
-      <section className="section-padding">
-        <div className="container-wide text-center">
+      <section className="section-padding relative overflow-hidden">
+        <div className="absolute inset-0 -z-10 opacity-[0.12]">
+          <img src={socialBg} alt="" aria-hidden="true" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/85 to-background" />
+        </div>
+        <div className="container-wide text-center relative">
           <div className="eyebrow mb-3">Sudah Dipilih Ribuan Profesional</div>
           <h2 className="font-serif text-4xl md:text-5xl mb-12">Kualitas korporasi, harga yang terjangkau.</h2>
           <div className="grid md:grid-cols-4 gap-6">
