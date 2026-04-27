@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import ebookImg from "@/assets/ebook-mockup.jpg";
 import courseImg from "@/assets/course-mockup.jpg";
 import webinarImg from "@/assets/webinar-mockup.jpg";
+import socialBg from "@/assets/event-ballroom.webp";
+import membershipBg from "@/assets/event-roleplay.webp";
 
 const products = [
   { type: "E-book", img: ebookImg, title: "ADDIE + Adab: Panduan People Development", who: "HR, L&D, founder", outcome: "Kerangka kerja siap pakai dalam 5 jam baca", price: "Rp 149.000", featured: false },
