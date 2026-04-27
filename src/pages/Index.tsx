@@ -154,9 +154,11 @@ const Index = () => {
             src={methodologyBg}
             alt=""
             aria-hidden="true"
-            className="w-full h-full object-cover opacity-15"
+            className="w-full h-full object-cover opacity-40 saturate-110"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/85 to-background" />
+          {/* Soft vignette: gelap di atas & bawah, tengah tetap memperlihatkan foto */}
+          <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/35 to-background/95" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/60 via-transparent to-background/60" />
         </div>
         <div className="container-wide relative">
           <div className="grid lg:grid-cols-12 gap-10 items-end mb-14">
