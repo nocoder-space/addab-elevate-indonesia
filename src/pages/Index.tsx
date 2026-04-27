@@ -11,6 +11,7 @@ import t1 from "@/assets/testimonial-1.jpg";
 import t2 from "@/assets/testimonial-2.jpg";
 import t3 from "@/assets/testimonial-3.jpg";
 import patternBg from "@/assets/pattern-bg.jpg";
+import methodologyBg from "@/assets/methodology-bg.jpg";
 
 const trustBadges = ["Perbankan", "Asuransi", "BUMN", "Telekomunikasi", "FMCG", "Kementerian", "Energi", "Manufaktur"];
 
@@ -146,8 +147,18 @@ const Index = () => {
       </section>
 
       {/* ADDIE FRAMEWORK */}
-      <section className="section-padding bg-card/30 border-y border-border/60">
-        <div className="container-wide">
+      <section className="section-padding relative border-y border-border/60 overflow-hidden">
+        {/* Background image with overlay */}
+        <div className="absolute inset-0 -z-10">
+          <img
+            src={methodologyBg}
+            alt=""
+            aria-hidden="true"
+            className="w-full h-full object-cover opacity-15"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/85 to-background" />
+        </div>
+        <div className="container-wide relative">
           <div className="grid lg:grid-cols-12 gap-10 items-end mb-14">
             <div className="lg:col-span-7">
               <div className="eyebrow mb-3">Metodologi</div>
