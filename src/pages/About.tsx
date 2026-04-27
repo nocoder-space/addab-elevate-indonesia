@@ -2,7 +2,9 @@ import { Link } from "react-router-dom";
 import { Award, BookOpen, Briefcase, GraduationCap, Heart, Mic, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import portrait from "@/assets/faisal-profile.jpg";
-import heroScene from "@/assets/faisal-credentials.jpg";
+import heroScene from "@/assets/event-corporate-training.webp";
+import narrativeBg from "@/assets/event-roleplay-stage.webp";
+import timelineBg from "@/assets/event-interactive-class.webp";
 
 const timeline = [
   { year: "2007", title: "Awal Perjalanan", desc: "Memulai karier sebagai trainer di industri perbankan, belajar bahwa transformasi sejati dimulai dari diagnosa, bukan motivasi." },
