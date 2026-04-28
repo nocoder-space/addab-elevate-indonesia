@@ -13,13 +13,18 @@ import t2 from "@/assets/testimonial-2.jpg";
 import t3 from "@/assets/testimonial-3.jpg";
 import patternBg from "@/assets/pattern-bg.jpg";
 import methodologyBg from "@/assets/methodology-bg.jpg";
-import galleryA from "@/assets/event-propertypro.webp";
-import galleryB from "@/assets/event-corporate-training.webp";
-import galleryC from "@/assets/event-leadership-workshop.webp";
-import galleryD from "@/assets/event-capacity-building.webp";
-import galleryE from "@/assets/event-ballroom.webp";
 import philosophyBg from "@/assets/event-group-photo.webp";
 import servicesBg from "@/assets/event-engagement-class.webp";
+import mFaisalPresenting from "@/assets/moments/moment-faisal-presenting.webp";
+import mLeadership from "@/assets/moments/moment-leadership-workshop.webp";
+import mBadanPangan from "@/assets/moments/moment-badan-pangan-group.webp";
+import mBtnFrontline from "@/assets/moments/moment-btn-frontline.webp";
+import mStartWithWhy from "@/assets/moments/moment-start-with-why.webp";
+import mPerkenalan from "@/assets/moments/moment-perkenalan-diri.webp";
+import mPenguatan from "@/assets/moments/moment-penguatan-karakter.webp";
+import m4Life from "@/assets/moments/moment-4life-intuition.webp";
+import mEngagement from "@/assets/moments/moment-engagement-talk.webp";
+import mInteractive from "@/assets/moments/moment-interactive-class.webp";
 
 const trustBadges = ["Perbankan", "Asuransi", "BUMN", "Telekomunikasi", "FMCG", "Kementerian", "Energi", "Manufaktur"];
 
@@ -257,27 +262,82 @@ const Index = () => {
         </div>
       </section>
 
-      {/* GALLERY — Momen di Lapangan */}
-      <section className="section-padding border-y border-border/60 bg-card/20">
-        <div className="container-wide">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <div className="eyebrow mb-3">Momen di Lapangan</div>
-            <h2 className="font-serif text-4xl md:text-5xl leading-tight">Dari ruang kelas korporasi hingga panggung nasional.</h2>
+      {/* GALLERY — Momen di Lapangan (modern bento layout) */}
+      <section className="section-padding border-y border-border/60 bg-card/20 relative overflow-hidden">
+        <div className="absolute -top-40 -left-40 w-[480px] h-[480px] bg-gradient-radial-gold blur-3xl opacity-40 pointer-events-none" />
+        <div className="container-wide relative">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+            <div className="max-w-2xl">
+              <div className="eyebrow mb-3">Momen di Lapangan</div>
+              <h2 className="font-serif text-4xl md:text-5xl leading-tight">Dari ruang kelas korporasi hingga panggung nasional.</h2>
+            </div>
+            <div className="hidden md:flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+              <span className="h-px w-12 bg-primary/40" />
+              <span>500+ Event • 100.000+ Peserta</span>
+            </div>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4">
-            {[
-              { src: galleryB, alt: "Sesi pelatihan korporasi yang interaktif" },
-              { src: galleryA, alt: "Keynote speaker di event PropertyPro" },
-              { src: galleryC, alt: "Workshop leadership dan organisasi" },
-              { src: galleryD, alt: "Capacity building outdoor" },
-              { src: galleryE, alt: "Pelatihan profesional di ballroom" },
-            ].map((g, i) => (
-              <div key={i} className={`relative overflow-hidden rounded-2xl border border-border/60 group ${i === 0 ? "col-span-2 row-span-2 lg:col-span-2 lg:row-span-2 aspect-square" : "aspect-square"}`}>
-                <img src={g.src} alt={g.alt} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
+
+          {(() => {
+            const moments = [
+              { src: mFaisalPresenting, alt: "Faisal Maulana memaparkan profil dan sertifikasi profesional", caption: "Profil & Kredensial", tag: "Keynote" },
+              { src: mBadanPangan, alt: "Pelatihan Peningkatan Kapasitas Biro Perencanaan Badan Pangan Nasional", caption: "Badan Pangan Nasional", tag: "Capacity Building" },
+              { src: mLeadership, alt: "Workshop Leadership & Organisasi Kepemudaan Kelurahan Cempaka Baru", caption: "Leadership Workshop", tag: "Public Sector" },
+              { src: mBtnFrontline, alt: "Frontline Champion Communication & Service Excellence Bank BTN", caption: "BTN Frontline Champion", tag: "Service Excellence" },
+              { src: mStartWithWhy, alt: "Pelatihan Start With Why bersama Badan Pangan Nasional", caption: "Start With Why", tag: "Mindset" },
+              { src: mPerkenalan, alt: "Sesi roleplay perkenalan diri di kelas pelatihan BTN", caption: "Roleplay Komunikasi", tag: "Experiential" },
+              { src: mPenguatan, alt: "Penguatan Karakter SDM Pengujian dan Pelayanan BRMP Biogen", caption: "Penguatan Karakter SDM", tag: "Kementerian" },
+              { src: m4Life, alt: "Sesi Intuition bersama komunitas 4Life", caption: "4Life Community", tag: "Komunitas" },
+              { src: mEngagement, alt: "Talk tentang Engagement dan profitabilitas perusahaan", caption: "Employee Engagement", tag: "Korporasi" },
+              { src: mInteractive, alt: "Kelas interaktif dengan partisipasi aktif peserta", caption: "Interactive Class", tag: "Energi" },
+            ];
+            // Bento spans tuned for lg (12-col grid) + auto-rows
+            const spans = [
+              "lg:col-span-5 lg:row-span-2",       // 0 hero
+              "lg:col-span-4 lg:row-span-2",       // 1 tall
+              "lg:col-span-3 lg:row-span-1",       // 2
+              "lg:col-span-3 lg:row-span-1",       // 3
+              "lg:col-span-3 lg:row-span-2",       // 4 tall
+              "lg:col-span-3 lg:row-span-1",       // 5
+              "lg:col-span-6 lg:row-span-1",       // 6 wide
+              "lg:col-span-3 lg:row-span-1",       // 7
+              "lg:col-span-4 lg:row-span-1",       // 8
+              "lg:col-span-5 lg:row-span-1",       // 9
+            ];
+            return (
+              <div className="grid grid-cols-2 md:grid-cols-6 lg:grid-cols-12 auto-rows-[140px] md:auto-rows-[160px] lg:auto-rows-[170px] gap-3 md:gap-4">
+                {moments.map((g, i) => (
+                  <figure
+                    key={i}
+                    className={`group relative overflow-hidden rounded-2xl border border-border/60 bg-card shadow-sm hover:shadow-gold transition-all duration-500 ${spans[i] ?? "lg:col-span-3"} col-span-1 md:col-span-2 row-span-1`}
+                  >
+                    <img
+                      src={g.src}
+                      alt={g.alt}
+                      loading="lazy"
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-110"
+                    />
+                    {/* Base subtle gradient for legibility */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/85 via-background/10 to-transparent" />
+                    {/* Gold ring on hover */}
+                    <div className="absolute inset-0 ring-1 ring-inset ring-primary/0 group-hover:ring-primary/40 transition-all duration-500 rounded-2xl" />
+
+                    {/* Tag chip — always visible */}
+                    <span className="absolute top-3 left-3 text-[10px] uppercase tracking-[0.18em] px-2.5 py-1 rounded-full bg-background/70 backdrop-blur-md border border-border/60 text-foreground/80">
+                      {g.tag}
+                    </span>
+
+                    {/* Caption — slides up on hover */}
+                    <figcaption className="absolute inset-x-0 bottom-0 p-4 md:p-5 translate-y-2 opacity-90 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                      <div className="font-serif text-base md:text-lg leading-tight text-foreground drop-shadow">
+                        {g.caption}
+                      </div>
+                      <div className="mt-1 h-px w-8 bg-primary/70 group-hover:w-16 transition-all duration-500" />
+                    </figcaption>
+                  </figure>
+                ))}
               </div>
-            ))}
-          </div>
+            );
+          })()}
         </div>
       </section>
 
