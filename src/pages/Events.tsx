@@ -48,15 +48,30 @@ const Events = () => (
                 </div>
                 <div className="flex flex-wrap items-center justify-between gap-4 pt-5 border-t border-border">
                   <div>
-                    <div className="text-xs text-muted-foreground">Investasi</div>
-                    <div className="font-serif text-2xl text-gradient-gold">{e.price}</div>
+                    <div className="text-xs text-muted-foreground">Status</div>
+                    <div className="font-serif text-lg text-gradient-gold">{e.price}</div>
                   </div>
-                  <Button className="bg-gradient-gold text-primary-foreground shadow-gold">Daftar Sekarang <ArrowRight className="ml-2 w-4 h-4" /></Button>
+                  <Button className="bg-gradient-gold text-primary-foreground shadow-gold">Gabung Waiting List <ArrowRight className="ml-2 w-4 h-4" /></Button>
                 </div>
               </div>
             </div>
           ))}
         </div>
+      </div>
+    </section>
+
+    {/* VIDEO — Suasana program sebelumnya */}
+    <section className="section-padding bg-card/30 border-y border-border/60">
+      <div className="container-tight max-w-4xl text-center">
+        <div className="eyebrow mb-3">Cuplikan Program</div>
+        <h2 className="font-serif text-3xl md:text-4xl leading-tight">Suasana program sebelumnya.</h2>
+        <p className="text-muted-foreground mt-5 max-w-2xl mx-auto leading-relaxed mb-10">
+          Lihat cuplikan kelas, workshop, dan interaksi peserta dalam program Faisal Maulana.
+        </p>
+        <VideoEmbed videoId="3SnYgfA_OS8" query="si=S1K0utafqt8YO06S" title="Cuplikan Workshop & Interaksi Peserta" />
+        <Button asChild className="mt-8 bg-gradient-gold text-primary-foreground shadow-gold">
+          <Link to="/contact">Ajukan Undangan Korporasi <ArrowRight className="ml-2 w-4 h-4" /></Link>
+        </Button>
       </div>
     </section>
 
