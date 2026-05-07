@@ -12,12 +12,13 @@ const Footer = () => (
             <img src={logoFaisal} alt="Faisal Maulana logo" width={44} height={44} className="w-11 h-11 rounded-full object-contain ring-1 ring-primary/40 shadow-gold" />
             <div>
               <div className="font-serif font-semibold text-lg">Faisal Maulana</div>
-              <div className="text-[10px] uppercase tracking-[0.2em] text-primary">People Development Expert</div>
+              <div className="text-[10px] uppercase tracking-[0.2em] text-primary">Transformational People Development Expert</div>
             </div>
           </div>
           <p className="text-sm text-muted-foreground leading-relaxed max-w-sm">
-            Mengubah potensi manusia menjadi performa bisnis yang terukur — melalui kerangka <span className="text-primary">ADDIE + Adab</span>, ilmu instructional design, dan nilai humanis Islami.
+            Membantu organisasi mengubah strategi menjadi perilaku kerja nyata melalui pendekatan <span className="text-primary">ADDIE</span>, experiential learning, dan nilai adab yang inklusif.
           </p>
+          <p className="mt-3 text-[11px] uppercase tracking-[0.25em] text-primary/80">Adab • Science • Impact</p>
           <div className="flex gap-3 mt-6">
             {[Instagram, Linkedin, Youtube, MessageCircle].map((Icon, i) => (
               <a key={i} href="#" aria-label="social" className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors">
@@ -30,7 +31,7 @@ const Footer = () => (
         <div className="md:col-span-2">
           <div className="text-xs uppercase tracking-[0.2em] text-primary mb-4">Korporasi</div>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li><Link to="/corporate" className="hover:text-foreground">Program In-House</Link></li>
+            <li><Link to="/corporate" className="hover:text-foreground">Signature Programs</Link></li>
             <li><Link to="/corporate" className="hover:text-foreground">Kerangka ADDIE</Link></li>
             <li><Link to="/corporate" className="hover:text-foreground">Studi Kasus</Link></li>
             <li><Link to="/contact" className="hover:text-foreground">Konsultasi</Link></li>
@@ -51,8 +52,8 @@ const Footer = () => (
           <div className="text-xs uppercase tracking-[0.2em] text-primary mb-4">Kontak</div>
           <ul className="space-y-3 text-sm text-muted-foreground">
             <li className="flex items-center gap-2"><Mail className="w-4 h-4 text-primary" /> hello@faisalmaulana.id</li>
-            <li className="flex items-center gap-2"><MessageCircle className="w-4 h-4 text-primary" /> +62 812-0000-0000</li>
-            <li className="text-xs leading-relaxed pt-2">SCBD Lot 28, Jakarta Selatan<br />Indonesia 12190</li>
+            <li className="flex items-center gap-2"><MessageCircle className="w-4 h-4 text-primary" /> +62 859-3000-6425</li>
+            <li className="text-xs leading-relaxed pt-2">Bogor / Jakarta, Indonesia</li>
           </ul>
         </div>
       </div>
