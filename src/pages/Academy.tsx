@@ -222,10 +222,10 @@ const Academy = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-background via-background/85 to-background" />
         </div>
         <div className="container-wide text-center relative">
-          <div className="eyebrow mb-3">Sudah Dipilih Ribuan Profesional</div>
-          <h2 className="font-serif text-4xl md:text-5xl mb-12">Kualitas korporasi, harga yang terjangkau.</h2>
+          <div className="eyebrow mb-3">Berbasis Pengalaman Lapangan</div>
+          <h2 className="font-serif text-4xl md:text-5xl mb-12">Materi yang lahir dari ruang training korporasi.</h2>
           <div className="grid md:grid-cols-4 gap-6">
-            {[{n:"12.000+",l:"Student aktif"},{n:"4.9/5",l:"Rating produk"},{n:"30+",l:"Course tersedia"},{n:"95%",l:"Tingkat penyelesaian"}].map(s => (
+            {[{n:"18+",l:"Tahun pengalaman"},{n:"200+",l:"Perusahaan klien"},{n:"500+",l:"Event terselenggara"},{n:"100K+",l:"Peserta program"}].map(s => (
               <div key={s.l} className="card-premium p-7">
                 <div className="font-serif text-4xl text-gradient-gold">{s.n}</div>
                 <div className="text-xs uppercase tracking-wider text-muted-foreground mt-2">{s.l}</div>
