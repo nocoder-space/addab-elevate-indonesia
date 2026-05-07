@@ -61,7 +61,7 @@ const Academy = () => {
               Pengetahuan korporasi, <span className="italic text-gradient-gold">untuk siapa saja</span> yang ingin bertumbuh.
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-xl leading-relaxed">
-              E-book, online course, webinar live, dan membership eksklusif — disusun dengan kualitas yang sama seperti program in-house yang kami berikan untuk korporasi nasional.
+              E-book, webinar, online course, dan membership yang disusun dari pengalaman lapangan mendampingi organisasi dan profesional Indonesia.
             </p>
             <div className="mt-9 flex flex-wrap gap-4">
               <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-gold h-14 px-8 font-semibold">
@@ -73,7 +73,7 @@ const Academy = () => {
             </div>
             <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-muted-foreground">
               <div className="flex items-center gap-2"><Check className="w-4 h-4 text-primary" /> Akses seumur hidup</div>
-              <div className="flex items-center gap-2"><Check className="w-4 h-4 text-primary" /> Sertifikat resmi</div>
+              <div className="flex items-center gap-2"><Check className="w-4 h-4 text-primary" /> Materi berbasis pengalaman corporate</div>
               <div className="flex items-center gap-2"><Check className="w-4 h-4 text-primary" /> Garansi 7 hari</div>
             </div>
           </div>
@@ -81,10 +81,10 @@ const Academy = () => {
           <div className="lg:col-span-5 reveal reveal-delay-2">
             <div className="grid grid-cols-2 gap-4">
               {[
-                { icon: BookOpen, n: "30+", l: "E-book & panduan" },
-                { icon: Video, n: "12", l: "Online course" },
-                { icon: Users, n: "12K+", l: "Student aktif" },
-                { icon: Award, n: "4.9/5", l: "Rating produk" },
+                { icon: Award, n: "18+", l: "Tahun pengalaman" },
+                { icon: Users, n: "100K+", l: "Peserta program" },
+                { icon: Video, n: "500+", l: "Event terselenggara" },
+                { icon: BookOpen, n: "200+", l: "Perusahaan klien" },
               ].map((s, i) => (
                 <div key={i} className="card-premium p-6">
                   <s.icon className="w-6 h-6 text-primary mb-4" />
