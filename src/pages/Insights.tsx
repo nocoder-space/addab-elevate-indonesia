@@ -1,3 +1,4 @@
+import VideoEmbed from "@/components/VideoEmbed";
 import { Link } from "react-router-dom";
 import { Search, ArrowRight, Clock, Tag } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -9,18 +10,18 @@ import courseImg from "@/assets/course-mockup.jpg";
 import webinarImg from "@/assets/webinar-mockup.jpg";
 import portrait from "@/assets/faisal-portrait.png";
 
-const categories = ["Semua", "People Development", "Islamic Leadership", "Sales & Marketing", "Produktivitas", "Komunikasi", "Service Excellence"];
+const categories = ["Semua", "People Development", "Leadership & Adab", "Sales & Marketing", "Produktivitas", "Komunikasi", "Service Excellence"];
 
 const featured = {
   img: workshopImg,
   cat: "People Development",
-  title: "Mengapa 70% program training korporasi gagal — dan bagaimana memperbaikinya",
-  excerpt: "Pelajaran dari 18 tahun mendampingi HR dan eksekutif Indonesia membangun program yang benar-benar menggerakkan perilaku tim.",
+  title: "Mengapa banyak program training korporasi gagal — dan bagaimana memperbaikinya",
+  excerpt: "Pelajaran dari pengalaman mendampingi HR dan eksekutif Indonesia dalam merancang program yang benar-benar menggerakkan perilaku tim.",
   read: "9 menit baca",
 };
 
 const articles = [
-  { img: consultationImg, cat: "Islamic Leadership", title: "Adab sebelum ilmu: prinsip kepemimpinan yang sering dilupakan", read: "6 menit" },
+  { img: consultationImg, cat: "Leadership & Adab", title: "Adab sebelum ilmu: prinsip kepemimpinan yang sering dilupakan", read: "6 menit" },
   { img: ebookImg, cat: "People Development", title: "Cara membaca laporan TNA agar program training tepat sasaran", read: "7 menit" },
   { img: courseImg, cat: "Sales & Marketing", title: "Psikologi closing untuk pasar Indonesia: 5 pola yang berulang", read: "8 menit" },
   { img: webinarImg, cat: "Komunikasi", title: "Storytelling untuk eksekutif: kapan data tidak cukup", read: "5 menit" },
@@ -29,8 +30,8 @@ const articles = [
 ];
 
 const leadMagnets = [
-  { title: "Template Training Needs Analysis", desc: "Lembar kerja yang dipakai konsultan korporasi untuk diagnosa.", cta: "Unduh Gratis" },
-  { title: "5 Framework Kepemimpinan Islami", desc: "PDF 24 halaman — siap diterapkan di tim Anda minggu ini.", cta: "Unduh Gratis" },
+  { title: "Template Training Needs Analysis", desc: "Lembar kerja yang dipakai konsultan korporasi untuk diagnosis.", cta: "Unduh Gratis" },
+  { title: "5 Framework Kepemimpinan Beradab", desc: "PDF 24 halaman — siap diterapkan di tim Anda minggu ini.", cta: "Unduh Gratis" },
   { title: "Checklist Service Excellence", desc: "30 titik kritis yang membedakan layanan biasa dari yang dirindukan.", cta: "Unduh Gratis" },
 ];
 
@@ -40,8 +41,8 @@ const Insights = () => (
       <div className="container-wide">
         <div className="max-w-3xl">
           <div className="eyebrow mb-4">Insights & Pengetahuan</div>
-          <h1 className="font-serif text-5xl md:text-6xl leading-tight">Knowledge center untuk profesional yang serius dengan <em className="text-gradient-gold not-italic">people development.</em></h1>
-          <p className="mt-6 text-lg text-muted-foreground max-w-2xl">Artikel mendalam, panduan praktis, dan tools yang dipakai oleh HR, L&D, dan eksekutif untuk membangun manusia yang lebih baik.</p>
+          <h1 className="font-serif text-5xl md:text-6xl leading-tight">Knowledge center untuk profesional yang serius dengan <em className="text-gradient-gold not-italic">transformasi manusia.</em></h1>
+          <p className="mt-6 text-lg text-muted-foreground max-w-2xl">Artikel, panduan praktis, dan tools berbasis Adab, Science, dan Impact untuk HR, L&D, leader, dan eksekutif.</p>
         </div>
         <div className="mt-10 max-w-xl relative">
           <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
@@ -99,6 +100,27 @@ const Insights = () => (
               </div>
             </Link>
           ))}
+        </div>
+      </div>
+    </section>
+
+    {/* Video Insight Pilihan */}
+    <section className="section-padding bg-card/30 border-y border-border/60">
+      <div className="container-wide">
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <div className="eyebrow mb-3">Video Insight Pilihan</div>
+          <h2 className="font-serif text-4xl md:text-5xl">Video insight pilihan.</h2>
+          <p className="text-muted-foreground mt-4">Cuplikan gagasan singkat untuk memahami pendekatan Faisal Maulana dalam people development.</p>
+        </div>
+        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          <div>
+            <VideoEmbed videoId="S8A85niP3lU" query="si=EN0C7S_ppH2aMMvS" title="Adab, Science, dan Impact dalam People Development" />
+            <h3 className="font-serif text-lg mt-4">Adab, Science, dan Impact dalam people development</h3>
+          </div>
+          <div>
+            <VideoEmbed videoId="3SnYgfA_OS8" query="si=S1K0utafqt8YO06S" title="Experiential Learning dalam Program Korporasi" />
+            <h3 className="font-serif text-lg mt-4">Experiential learning dalam program korporasi</h3>
+          </div>
         </div>
       </div>
     </section>

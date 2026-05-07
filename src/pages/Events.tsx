@@ -1,16 +1,17 @@
 import { Calendar, MapPin, Users, ArrowRight, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import VideoEmbed from "@/components/VideoEmbed";
 import workshopImg from "@/assets/event-corporate-training.webp";
 import webinarImg from "@/assets/event-engagement-class.webp";
 import trainingImg from "@/assets/event-leadership-workshop.webp";
 import bootcampImg from "@/assets/event-capacity-building.webp";
 
 const events = [
-  { type: "Webinar Live", img: webinarImg, title: "Membangun Tim High-Performance dengan Nilai Adab", date: "7 Mei 2026", time: "19:30 WIB", location: "Online via Zoom", seats: "100 peserta", price: "Rp 299.000", featured: true },
-  { type: "Public Workshop", img: workshopImg, title: "Sales & Marketing Champion — Public Class Jakarta", date: "22-23 Mei 2026", time: "09:00 – 17:00 WIB", location: "Hotel Mulia Senayan, Jakarta", seats: "30 peserta", price: "Rp 4.500.000", featured: false },
-  { type: "Webinar Live", img: trainingImg, title: "Strategi People Development untuk Startup Bertumbuh", date: "12 Juni 2026", time: "20:00 WIB", location: "Online via Zoom", seats: "200 peserta", price: "Rp 199.000", featured: false },
-  { type: "Public Workshop", img: bootcampImg, title: "Transformational Leadership Bootcamp", date: "5-7 Juli 2026", time: "Full day", location: "Bandung", seats: "25 peserta", price: "Rp 7.500.000", featured: false },
+  { type: "Webinar Live", img: webinarImg, title: "High-Performance Team with Adab Values", date: "Coming Soon", time: "Diumumkan via email", location: "Online via Zoom", seats: "100 peserta", price: "Batch berikutnya segera dibuka", featured: true },
+  { type: "Public Workshop", img: workshopImg, title: "Transformational Sales & Mindset Champion — Public Class Jakarta", date: "Coming Soon", time: "Full day", location: "Jakarta", seats: "30 peserta", price: "Waiting list dibuka", featured: false },
+  { type: "Webinar Live", img: trainingImg, title: "People Development Architect for Growing Organizations", date: "Coming Soon", time: "Diumumkan via email", location: "Online via Zoom", seats: "200 peserta", price: "Batch berikutnya segera dibuka", featured: false },
+  { type: "Public Workshop", img: bootcampImg, title: "Adab & Science Leadership Bootcamp", date: "Coming Soon", time: "Full day", location: "Bandung / Bogor", seats: "25 peserta", price: "Waiting list dibuka", featured: false },
 ];
 
 const Events = () => (
@@ -19,8 +20,8 @@ const Events = () => (
       <div className="container-wide">
         <div className="max-w-3xl">
           <div className="eyebrow mb-4">Acara & Pelatihan Publik</div>
-          <h1 className="font-serif text-5xl md:text-6xl leading-tight">Belajar langsung — dalam <em className="text-gradient-gold not-italic">ruang yang terjaga.</em></h1>
-          <p className="mt-6 text-lg text-muted-foreground max-w-2xl">Webinar, public workshop, dan bootcamp eksklusif. Setiap acara dirancang dengan kapasitas terbatas agar setiap peserta mendapatkan perhatian penuh.</p>
+          <h1 className="font-serif text-5xl md:text-6xl leading-tight">Belajar langsung dalam ruang <em className="text-gradient-gold not-italic">kecil, intensif, dan berdampak.</em></h1>
+          <p className="mt-6 text-lg text-muted-foreground max-w-2xl">Webinar, public workshop, dan bootcamp eksklusif yang dirancang agar setiap peserta mendapatkan pengalaman belajar yang relevan, praktis, dan dapat ditindaklanjuti.</p>
         </div>
       </div>
     </section>
@@ -47,15 +48,30 @@ const Events = () => (
                 </div>
                 <div className="flex flex-wrap items-center justify-between gap-4 pt-5 border-t border-border">
                   <div>
-                    <div className="text-xs text-muted-foreground">Investasi</div>
-                    <div className="font-serif text-2xl text-gradient-gold">{e.price}</div>
+                    <div className="text-xs text-muted-foreground">Status</div>
+                    <div className="font-serif text-lg text-gradient-gold">{e.price}</div>
                   </div>
-                  <Button className="bg-gradient-gold text-primary-foreground shadow-gold">Daftar Sekarang <ArrowRight className="ml-2 w-4 h-4" /></Button>
+                  <Button className="bg-gradient-gold text-primary-foreground shadow-gold">Gabung Waiting List <ArrowRight className="ml-2 w-4 h-4" /></Button>
                 </div>
               </div>
             </div>
           ))}
         </div>
+      </div>
+    </section>
+
+    {/* VIDEO — Suasana program sebelumnya */}
+    <section className="section-padding bg-card/30 border-y border-border/60">
+      <div className="container-tight max-w-4xl text-center">
+        <div className="eyebrow mb-3">Cuplikan Program</div>
+        <h2 className="font-serif text-3xl md:text-4xl leading-tight">Suasana program sebelumnya.</h2>
+        <p className="text-muted-foreground mt-5 max-w-2xl mx-auto leading-relaxed mb-10">
+          Lihat cuplikan kelas, workshop, dan interaksi peserta dalam program Faisal Maulana.
+        </p>
+        <VideoEmbed videoId="3SnYgfA_OS8" query="si=S1K0utafqt8YO06S" title="Cuplikan Workshop & Interaksi Peserta" />
+        <Button asChild className="mt-8 bg-gradient-gold text-primary-foreground shadow-gold">
+          <Link to="/contact">Ajukan Undangan Korporasi <ArrowRight className="ml-2 w-4 h-4" /></Link>
+        </Button>
       </div>
     </section>
 

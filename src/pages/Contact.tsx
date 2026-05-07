@@ -194,15 +194,23 @@ const Contact = () => {
                   <div className="w-11 h-11 rounded-xl bg-primary/10 border border-primary/30 flex items-center justify-center text-primary group-hover:bg-gradient-gold group-hover:text-primary-foreground transition-all"><Mail className="w-4 h-4" /></div>
                   <div><div className="text-xs text-muted-foreground">Email</div><div className="text-sm font-medium">hello@faisalmaulana.id</div></div>
                 </a>
-                <a href="#" className="flex items-center gap-4 group">
+                <a href="https://wa.me/6285930006425" className="flex items-center gap-4 group">
                   <div className="w-11 h-11 rounded-xl bg-primary/10 border border-primary/30 flex items-center justify-center text-primary group-hover:bg-gradient-gold group-hover:text-primary-foreground transition-all"><MessageCircle className="w-4 h-4" /></div>
-                  <div><div className="text-xs text-muted-foreground">WhatsApp</div><div className="text-sm font-medium">+62 812-0000-0000</div></div>
+                  <div><div className="text-xs text-muted-foreground">WhatsApp</div><div className="text-sm font-medium">+62 859-3000-6425</div></div>
                 </a>
                 <div className="flex items-center gap-4">
                   <div className="w-11 h-11 rounded-xl bg-primary/10 border border-primary/30 flex items-center justify-center text-primary"><MapPin className="w-4 h-4" /></div>
-                  <div><div className="text-xs text-muted-foreground">Kantor</div><div className="text-sm font-medium">SCBD Lot 28, Jakarta Selatan</div></div>
+                  <div><div className="text-xs text-muted-foreground">Kantor</div><div className="text-sm font-medium">Bogor / Jakarta, Indonesia</div></div>
                 </div>
               </div>
+            </div>
+
+            <div className="card-premium p-7">
+              <div className="eyebrow mb-3">Kenali Pendekatan dalam 3 Menit</div>
+              <p className="text-sm text-muted-foreground mb-4">Sebelum mengirim inquiry, Anda dapat menonton pengantar singkat tentang pendekatan Adab, Science, dan Impact.</p>
+              <Button asChild variant="outline" size="sm" className="border-primary/40 hover:bg-primary/10">
+                <a href="https://www.youtube.com/watch?v=S8A85niP3lU" target="_blank" rel="noopener noreferrer">Tonton Video Pengantar</a>
+              </Button>
             </div>
 
             <div className="card-premium p-7">

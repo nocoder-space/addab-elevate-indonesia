@@ -41,7 +41,7 @@ const Navbar = () => {
           />
           <div className="leading-tight">
             <div className="font-serif font-semibold text-lg text-foreground">Faisal Maulana</div>
-            <div className="text-[10px] uppercase tracking-[0.2em] text-primary">People Development Expert</div>
+            <div className="text-[10px] uppercase tracking-[0.2em] text-primary">People Transformation Expert</div>
           </div>
         </Link>
 

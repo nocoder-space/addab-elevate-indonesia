@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { ArrowRight, Star, Clock, Users, Award, BookOpen, Video, Crown, Check } from "lucide-react";
+import { ArrowRight, Clock, Users, Award, BookOpen, Video, Crown, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import VideoEmbed from "@/components/VideoEmbed";
 import ebookImg from "@/assets/ebook-mockup.jpg";
 import courseImg from "@/assets/course-mockup.jpg";
 import webinarImg from "@/assets/webinar-mockup.jpg";
@@ -9,12 +10,12 @@ import socialBg from "@/assets/event-ballroom.webp";
 import membershipBg from "@/assets/event-roleplay.webp";
 
 const products = [
-  { type: "E-book", img: ebookImg, title: "ADDIE + Adab: Panduan People Development", who: "HR, L&D, founder", outcome: "Kerangka kerja siap pakai dalam 5 jam baca", price: "Rp 149.000", featured: false },
-  { type: "E-book", img: ebookImg, title: "5 Framework Kepemimpinan Islami", who: "Manager dan supervisor", outcome: "Kepemimpinan yang amanah dan dipercaya", price: "Rp 99.000", featured: false },
-  { type: "Course", img: courseImg, title: "Islamic Leadership Mastery", who: "Manager – C-Level", outcome: "8 modul, 32 video, sertifikat resmi", price: "Rp 1.999.000", featured: true },
-  { type: "Course", img: courseImg, title: "Sales Psychology Masterclass", who: "Sales rep dan team leader", outcome: "Naik konversi 30% dalam 90 hari", price: "Rp 1.799.000", featured: false },
+  { type: "E-book", img: ebookImg, title: "ADDIE + Adab: People Development Blueprint", who: "HR, L&D, founder", outcome: "Kerangka kerja siap pakai dalam 5 jam baca", price: "Rp 149.000", featured: false },
+  { type: "E-book", img: ebookImg, title: "5 Framework Kepemimpinan Beradab", who: "Manager dan supervisor", outcome: "Kepemimpinan yang amanah dan dipercaya", price: "Rp 99.000", featured: false },
+  { type: "Course", img: courseImg, title: "Adab & Science Leadership Mastery", who: "Manager – C-Level", outcome: "8 modul, 32 video, sertifikat resmi", price: "Rp 1.999.000", featured: true },
+  { type: "Course", img: courseImg, title: "Transformational Sales & Mindset Champion", who: "Sales rep dan team leader", outcome: "Kerangka mindset dan teknik closing", price: "Rp 1.799.000", featured: false },
   { type: "Bundle", img: ebookImg, title: "People Development Starter Pack", who: "HR yang baru memulai", outcome: "3 e-book + 1 mini course + template", price: "Rp 499.000", featured: true },
-  { type: "Webinar", img: webinarImg, title: "High-Performance Team dengan Adab", who: "Founder dan team leader", outcome: "Live 90 menit + replay 30 hari", price: "Rp 299.000", featured: false },
+  { type: "Webinar", img: webinarImg, title: "High-Performance Team with Adab Values", who: "Founder dan team leader", outcome: "Live 90 menit + materi pendukung", price: "Rp 299.000", featured: false },
 ];
 
 const membership = [
@@ -22,7 +23,7 @@ const membership = [
   "Library template HR & L&D yang terus diperbarui",
   "Akses prioritas ke webinar dan event eksklusif",
   "Komunitas privat profesional people development",
-  "Diskon 30% untuk seluruh produk Academy",
+  "Diskon untuk seluruh produk Academy",
 ];
 
 const Academy = () => {
@@ -60,7 +61,7 @@ const Academy = () => {
               Pengetahuan korporasi, <span className="italic text-gradient-gold">untuk siapa saja</span> yang ingin bertumbuh.
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-xl leading-relaxed">
-              E-book, online course, webinar live, dan membership eksklusif — disusun dengan kualitas yang sama seperti program in-house yang kami berikan untuk korporasi nasional.
+              E-book, webinar, online course, dan membership yang disusun dari pengalaman lapangan mendampingi organisasi dan profesional Indonesia.
             </p>
             <div className="mt-9 flex flex-wrap gap-4">
               <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-gold h-14 px-8 font-semibold">
@@ -72,7 +73,7 @@ const Academy = () => {
             </div>
             <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-muted-foreground">
               <div className="flex items-center gap-2"><Check className="w-4 h-4 text-primary" /> Akses seumur hidup</div>
-              <div className="flex items-center gap-2"><Check className="w-4 h-4 text-primary" /> Sertifikat resmi</div>
+              <div className="flex items-center gap-2"><Check className="w-4 h-4 text-primary" /> Materi berbasis pengalaman corporate</div>
               <div className="flex items-center gap-2"><Check className="w-4 h-4 text-primary" /> Garansi 7 hari</div>
             </div>
           </div>
@@ -80,10 +81,10 @@ const Academy = () => {
           <div className="lg:col-span-5 reveal reveal-delay-2">
             <div className="grid grid-cols-2 gap-4">
               {[
-                { icon: BookOpen, n: "30+", l: "E-book & panduan" },
-                { icon: Video, n: "12", l: "Online course" },
-                { icon: Users, n: "12K+", l: "Student aktif" },
-                { icon: Award, n: "4.9/5", l: "Rating produk" },
+                { icon: Award, n: "18+", l: "Tahun pengalaman" },
+                { icon: Users, n: "100K+", l: "Peserta program" },
+                { icon: Video, n: "500+", l: "Event terselenggara" },
+                { icon: BookOpen, n: "200+", l: "Perusahaan klien" },
               ].map((s, i) => (
                 <div key={i} className="card-premium p-6">
                   <s.icon className="w-6 h-6 text-primary mb-4" />
@@ -96,13 +97,13 @@ const Academy = () => {
         </div>
       </section>
 
-      {/* WEBINAR COUNTDOWN */}
+      {/* WEBINAR BANNER */}
       <section className="bg-card border-y border-border py-10">
         <div className="container-wide flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <div className="text-xs uppercase tracking-[0.25em] text-primary mb-2 font-semibold">Webinar Live Berikutnya</div>
-            <h3 className="font-serif text-2xl md:text-3xl">Membangun Tim High-Performance dengan Nilai Adab</h3>
-            <p className="text-sm text-muted-foreground mt-1">Hanya untuk 100 peserta pertama • Rp 299.000</p>
+            <h3 className="font-serif text-2xl md:text-3xl">High-Performance Team with Adab Values</h3>
+            <p className="text-sm text-muted-foreground mt-1">Batch berikutnya segera dibuka • Notifikasi via email</p>
           </div>
           <div className="flex items-center gap-3">
             {[{n:days,l:"Hari"},{n:hours,l:"Jam"},{n:mins,l:"Menit"}].map(x => (
@@ -111,7 +112,26 @@ const Academy = () => {
                 <div className="text-[10px] uppercase tracking-wider text-muted-foreground">{x.l}</div>
               </div>
             ))}
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 h-14 ml-2 font-semibold shadow-gold">Daftar</Button>
+            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 h-14 ml-2 font-semibold shadow-gold">Daftar Waiting List</Button>
+          </div>
+        </div>
+      </section>
+
+      {/* VIDEO — Cara belajar di Academy */}
+      <section className="section-padding">
+        <div className="container-wide grid lg:grid-cols-12 gap-12 items-center">
+          <div className="lg:col-span-7">
+            <VideoEmbed videoId="S8A85niP3lU" query="si=EN0C7S_ppH2aMMvS" title="Pengantar Belajar di Faisal Maulana Academy" />
+          </div>
+          <div className="lg:col-span-5">
+            <div className="eyebrow mb-3">Cara Belajar</div>
+            <h2 className="font-serif text-3xl md:text-4xl leading-tight">Mulai dari satu pembelajaran, lanjut menjadi perubahan kebiasaan.</h2>
+            <p className="text-muted-foreground mt-5 leading-relaxed">Materi digital disusun agar ringkas, praktis, dan langsung bisa diterapkan dalam pekerjaan.</p>
+            <ul className="mt-6 space-y-3 text-sm text-foreground/85">
+              <li className="flex gap-3"><span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" /> Belajar dengan konsep yang sederhana.</li>
+              <li className="flex gap-3"><span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" /> Dilengkapi worksheet atau action prompt.</li>
+              <li className="flex gap-3"><span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" /> Terhubung dengan pengalaman corporate Faisal Maulana.</li>
+            </ul>
           </div>
         </div>
       </section>
@@ -166,8 +186,8 @@ const Academy = () => {
           <div className="grid lg:grid-cols-12 gap-10">
             <div className="lg:col-span-5">
               <div className="eyebrow mb-3">Inner Circle</div>
-              <h2 className="font-serif text-4xl md:text-5xl leading-tight">Membership untuk profesional yang ingin terus tumbuh.</h2>
-              <p className="text-muted-foreground mt-5 leading-relaxed">Sebuah lingkaran kecil — terjaga, hangat, dan bergerak bersama. Akses langsung ke pengetahuan, template, dan komunitas yang biasanya hanya tersedia untuk klien korporasi.</p>
+              <h2 className="font-serif text-4xl md:text-5xl leading-tight">Inner Circle Faisal Maulana.</h2>
+              <p className="text-muted-foreground mt-5 leading-relaxed">Komunitas belajar untuk profesional yang ingin memperkuat mindset, leadership, komunikasi, dan people development secara berkelanjutan.</p>
             </div>
             <div className="lg:col-span-7">
               <div className="card-premium p-8 md:p-10 relative overflow-hidden">
@@ -202,10 +222,10 @@ const Academy = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-background via-background/85 to-background" />
         </div>
         <div className="container-wide text-center relative">
-          <div className="eyebrow mb-3">Sudah Dipilih Ribuan Profesional</div>
-          <h2 className="font-serif text-4xl md:text-5xl mb-12">Kualitas korporasi, harga yang terjangkau.</h2>
+          <div className="eyebrow mb-3">Berbasis Pengalaman Lapangan</div>
+          <h2 className="font-serif text-4xl md:text-5xl mb-12">Materi yang lahir dari ruang training korporasi.</h2>
           <div className="grid md:grid-cols-4 gap-6">
-            {[{n:"12.000+",l:"Student aktif"},{n:"4.9/5",l:"Rating produk"},{n:"30+",l:"Course tersedia"},{n:"95%",l:"Tingkat penyelesaian"}].map(s => (
+            {[{n:"18+",l:"Tahun pengalaman"},{n:"200+",l:"Perusahaan klien"},{n:"500+",l:"Event terselenggara"},{n:"100K+",l:"Peserta program"}].map(s => (
               <div key={s.l} className="card-premium p-7">
                 <div className="font-serif text-4xl text-gradient-gold">{s.n}</div>
                 <div className="text-xs uppercase tracking-wider text-muted-foreground mt-2">{s.l}</div>
