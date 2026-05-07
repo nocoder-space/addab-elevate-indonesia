@@ -430,14 +430,14 @@ const Index = () => {
               <div className="lg:col-span-7">
                 <div className="eyebrow mb-4">Langkah Berikutnya</div>
                 <h2 className="font-serif text-4xl md:text-5xl leading-tight">Mari bicarakan transformasi tim Anda.</h2>
-                <p className="text-muted-foreground mt-5 max-w-xl">Diskusi awal selama 30 menit — gratis, tanpa komitmen. Saya akan dengarkan tantangan Anda dan bantu petakan langkah pertama yang paling tepat.</p>
+                <p className="text-muted-foreground mt-5 max-w-xl">Ceritakan kebutuhan organisasi Anda. Kami akan membantu memetakan pendekatan yang paling relevan — mulai dari diagnosis, desain program, hingga evaluasi dampak.</p>
               </div>
               <div className="lg:col-span-5 flex flex-col gap-3">
                 <Button asChild size="lg" className="bg-gradient-gold text-primary-foreground hover:opacity-90 shadow-gold h-14 text-base">
-                  <Link to="/contact">Jadwalkan Konsultasi Korporasi <ArrowRight className="ml-2 w-4 h-4" /></Link>
+                  <Link to="/contact">Jadwalkan Konsultasi Corporate <ArrowRight className="ml-2 w-4 h-4" /></Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="h-14 text-base border-foreground/20">
-                  <Link to="/academy">Mulai dari Academy</Link>
+                  <Link to="/academy">Jelajahi Academy</Link>
                 </Button>
                 <div className="text-xs text-muted-foreground text-center pt-2">Respon dalam 1×24 jam kerja</div>
               </div>
