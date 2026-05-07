@@ -9,18 +9,18 @@ import courseImg from "@/assets/course-mockup.jpg";
 import webinarImg from "@/assets/webinar-mockup.jpg";
 import portrait from "@/assets/faisal-portrait.png";
 
-const categories = ["Semua", "People Development", "Islamic Leadership", "Sales & Marketing", "Produktivitas", "Komunikasi", "Service Excellence"];
+const categories = ["Semua", "People Development", "Leadership & Adab", "Sales & Marketing", "Produktivitas", "Komunikasi", "Service Excellence"];
 
 const featured = {
   img: workshopImg,
   cat: "People Development",
-  title: "Mengapa 70% program training korporasi gagal — dan bagaimana memperbaikinya",
-  excerpt: "Pelajaran dari 18 tahun mendampingi HR dan eksekutif Indonesia membangun program yang benar-benar menggerakkan perilaku tim.",
+  title: "Mengapa banyak program training korporasi gagal — dan bagaimana memperbaikinya",
+  excerpt: "Pelajaran dari pengalaman mendampingi HR dan eksekutif Indonesia dalam merancang program yang benar-benar menggerakkan perilaku tim.",
   read: "9 menit baca",
 };
 
 const articles = [
-  { img: consultationImg, cat: "Islamic Leadership", title: "Adab sebelum ilmu: prinsip kepemimpinan yang sering dilupakan", read: "6 menit" },
+  { img: consultationImg, cat: "Leadership & Adab", title: "Adab sebelum ilmu: prinsip kepemimpinan yang sering dilupakan", read: "6 menit" },
   { img: ebookImg, cat: "People Development", title: "Cara membaca laporan TNA agar program training tepat sasaran", read: "7 menit" },
   { img: courseImg, cat: "Sales & Marketing", title: "Psikologi closing untuk pasar Indonesia: 5 pola yang berulang", read: "8 menit" },
   { img: webinarImg, cat: "Komunikasi", title: "Storytelling untuk eksekutif: kapan data tidak cukup", read: "5 menit" },
@@ -29,8 +29,8 @@ const articles = [
 ];
 
 const leadMagnets = [
-  { title: "Template Training Needs Analysis", desc: "Lembar kerja yang dipakai konsultan korporasi untuk diagnosa.", cta: "Unduh Gratis" },
-  { title: "5 Framework Kepemimpinan Islami", desc: "PDF 24 halaman — siap diterapkan di tim Anda minggu ini.", cta: "Unduh Gratis" },
+  { title: "Template Training Needs Analysis", desc: "Lembar kerja yang dipakai konsultan korporasi untuk diagnosis.", cta: "Unduh Gratis" },
+  { title: "5 Framework Kepemimpinan Beradab", desc: "PDF 24 halaman — siap diterapkan di tim Anda minggu ini.", cta: "Unduh Gratis" },
   { title: "Checklist Service Excellence", desc: "30 titik kritis yang membedakan layanan biasa dari yang dirindukan.", cta: "Unduh Gratis" },
 ];
 
