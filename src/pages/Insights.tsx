@@ -1,3 +1,4 @@
+import VideoEmbed from "@/components/VideoEmbed";
 import { Link } from "react-router-dom";
 import { Search, ArrowRight, Clock, Tag } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -99,6 +100,27 @@ const Insights = () => (
               </div>
             </Link>
           ))}
+        </div>
+      </div>
+    </section>
+
+    {/* Video Insight Pilihan */}
+    <section className="section-padding bg-card/30 border-y border-border/60">
+      <div className="container-wide">
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <div className="eyebrow mb-3">Video Insight Pilihan</div>
+          <h2 className="font-serif text-4xl md:text-5xl">Video insight pilihan.</h2>
+          <p className="text-muted-foreground mt-4">Cuplikan gagasan singkat untuk memahami pendekatan Faisal Maulana dalam people development.</p>
+        </div>
+        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          <div>
+            <VideoEmbed videoId="S8A85niP3lU" query="si=EN0C7S_ppH2aMMvS" title="Adab, Science, dan Impact dalam People Development" />
+            <h3 className="font-serif text-lg mt-4">Adab, Science, dan Impact dalam people development</h3>
+          </div>
+          <div>
+            <VideoEmbed videoId="3SnYgfA_OS8" query="si=S1K0utafqt8YO06S" title="Experiential Learning dalam Program Korporasi" />
+            <h3 className="font-serif text-lg mt-4">Experiential learning dalam program korporasi</h3>
+          </div>
         </div>
       </div>
     </section>
