@@ -97,13 +97,13 @@ const Academy = () => {
         </div>
       </section>
 
-      {/* WEBINAR COUNTDOWN */}
+      {/* WEBINAR BANNER */}
       <section className="bg-card border-y border-border py-10">
         <div className="container-wide flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <div className="text-xs uppercase tracking-[0.25em] text-primary mb-2 font-semibold">Webinar Live Berikutnya</div>
-            <h3 className="font-serif text-2xl md:text-3xl">Membangun Tim High-Performance dengan Nilai Adab</h3>
-            <p className="text-sm text-muted-foreground mt-1">Hanya untuk 100 peserta pertama • Rp 299.000</p>
+            <h3 className="font-serif text-2xl md:text-3xl">High-Performance Team with Adab Values</h3>
+            <p className="text-sm text-muted-foreground mt-1">Batch berikutnya segera dibuka • Notifikasi via email</p>
           </div>
           <div className="flex items-center gap-3">
             {[{n:days,l:"Hari"},{n:hours,l:"Jam"},{n:mins,l:"Menit"}].map(x => (
@@ -112,7 +112,26 @@ const Academy = () => {
                 <div className="text-[10px] uppercase tracking-wider text-muted-foreground">{x.l}</div>
               </div>
             ))}
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 h-14 ml-2 font-semibold shadow-gold">Daftar</Button>
+            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 h-14 ml-2 font-semibold shadow-gold">Daftar Waiting List</Button>
+          </div>
+        </div>
+      </section>
+
+      {/* VIDEO — Cara belajar di Academy */}
+      <section className="section-padding">
+        <div className="container-wide grid lg:grid-cols-12 gap-12 items-center">
+          <div className="lg:col-span-7">
+            <VideoEmbed videoId="S8A85niP3lU" query="si=EN0C7S_ppH2aMMvS" title="Pengantar Belajar di Faisal Maulana Academy" />
+          </div>
+          <div className="lg:col-span-5">
+            <div className="eyebrow mb-3">Cara Belajar</div>
+            <h2 className="font-serif text-3xl md:text-4xl leading-tight">Mulai dari satu pembelajaran, lanjut menjadi perubahan kebiasaan.</h2>
+            <p className="text-muted-foreground mt-5 leading-relaxed">Materi digital disusun agar ringkas, praktis, dan langsung bisa diterapkan dalam pekerjaan.</p>
+            <ul className="mt-6 space-y-3 text-sm text-foreground/85">
+              <li className="flex gap-3"><span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" /> Belajar dengan konsep yang sederhana.</li>
+              <li className="flex gap-3"><span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" /> Dilengkapi worksheet atau action prompt.</li>
+              <li className="flex gap-3"><span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" /> Terhubung dengan pengalaman corporate Faisal Maulana.</li>
+            </ul>
           </div>
         </div>
       </section>
