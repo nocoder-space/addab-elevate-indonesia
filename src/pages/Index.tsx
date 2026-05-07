@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, ArrowUpRight, CheckCircle2, Star, Sparkles, Users, Building2, Award, Target, Lightbulb, Rocket, BarChart3, Shield } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Star, Sparkles, Target, Lightbulb, Rocket, BarChart3 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ClientLogosMarquee from "@/components/ClientLogosMarquee";
+import VideoEmbed from "@/components/VideoEmbed";
 import heroImg from "@/assets/faisal-hero.jpg";
-import portraitImg from "@/assets/faisal-profile.jpg";
-import workshopImg from "@/assets/faisal-corporate.jpg";
 import ebookImg from "@/assets/ebook-mockup.jpg";
 import courseImg from "@/assets/course-mockup.jpg";
 import webinarImg from "@/assets/webinar-mockup.jpg";
@@ -26,35 +25,47 @@ import m4Life from "@/assets/moments/moment-4life-intuition.webp";
 import mEngagement from "@/assets/moments/moment-engagement-talk.webp";
 import mInteractive from "@/assets/moments/moment-interactive-class.webp";
 
-const trustBadges = ["Perbankan", "Asuransi", "BUMN", "Telekomunikasi", "FMCG", "Kementerian", "Energi", "Manufaktur"];
-
 const addieStages = [
-  { letter: "A", title: "Analysis", desc: "Diagnosa kebutuhan organisasi, gap kompetensi, dan akar persoalan performa sebelum desain dimulai.", icon: Target },
-  { letter: "D", title: "Design", desc: "Merancang arsitektur pembelajaran yang selaras dengan tujuan bisnis dan budaya perusahaan.", icon: Lightbulb },
-  { letter: "D", title: "Development", desc: "Membangun materi, simulasi, dan pengalaman yang relevan dengan konteks tim Anda.", icon: Sparkles },
-  { letter: "I", title: "Implementation", desc: "Eksekusi terukur dengan fasilitator senior dan metode experiential learning.", icon: Rocket },
-  { letter: "E", title: "Evaluation", desc: "Mengukur dampak perilaku, performa, dan ROI — bukan sekadar kepuasan peserta.", icon: BarChart3 },
+  { letter: "A", title: "Analysis", desc: "Diagnosis kebutuhan, tantangan perilaku, dan gap performa organisasi.", icon: Target },
+  { letter: "D", title: "Design", desc: "Blueprint program yang sesuai target bisnis, budaya, dan karakter peserta.", icon: Lightbulb },
+  { letter: "D", title: "Development", desc: "Modul, simulasi, case study, workbook, dan tools implementasi.", icon: Sparkles },
+  { letter: "I", title: "Implementation", desc: "Fasilitasi experiential melalui diskusi, roleplay, refleksi, dan action plan.", icon: Rocket },
+  { letter: "E", title: "Evaluation", desc: "Pre/post assessment, feedback, report, dan rekomendasi tindak lanjut.", icon: BarChart3 },
 ];
 
-const services = [
-  { title: "Sales & Marketing Champion", outcome: "Naikkan rasio konversi dan revenue per representative", desc: "Membangun mentalitas juara, sistem prospecting, dan keterampilan closing berbasis psikologi pelanggan Indonesia." },
-  { title: "Transformational Leadership", outcome: "Membentuk pemimpin yang dipercaya dan diikuti", desc: "Mengembangkan kapasitas pengaruh, pengambilan keputusan, dan keberanian moral di level manajerial." },
-  { title: "Team Synergy & Trust Building", outcome: "Tingkatkan engagement dan menurunkan turnover", desc: "Membangun rasa saling percaya, akuntabilitas, dan ritme kolaborasi yang sehat di lintas divisi." },
-  { title: "Service Excellence", outcome: "Menghidupkan budaya layanan yang memenangkan loyalitas", desc: "Mengubah sekadar prosedur menjadi pengalaman pelanggan yang konsisten dan bermakna." },
-  { title: "Impactful Communication", outcome: "Menyampaikan ide yang didengar dan ditindaklanjuti", desc: "Public speaking, storytelling bisnis, dan struktur komunikasi yang dipakai eksekutif kelas dunia." },
-  { title: "Negotiation & Persuasion", outcome: "Hasilkan kesepakatan tanpa mengorbankan hubungan", desc: "Strategi negosiasi berbasis prinsip, etika, dan pemahaman psikologis lawan bicara." },
+const signaturePrograms = [
+  {
+    title: "Adab & Science Leadership Mastery",
+    desc: "Program kepemimpinan untuk membangun leader yang adaptif, berintegritas, komunikatif, dan mampu menggerakkan tim.",
+    target: "Manager, Supervisor, Leader, C-Level",
+  },
+  {
+    title: "Transformational Sales & Mindset Champion",
+    desc: "Program untuk membangun sales team yang disiplin, percaya diri, customer-centric, dan berorientasi pada hasil jangka panjang.",
+    target: "Sales Team, Business Development, Marketing Team",
+  },
+  {
+    title: "Experiential People Development Architect",
+    desc: "Program untuk HR, L&D, dan internal trainer dalam merancang proses people development yang lebih sistematis dan berdampak.",
+    target: "HR, L&D, Internal Trainer",
+  },
+  {
+    title: "Executive Transformation Journey",
+    desc: "Coaching dan pendampingan premium untuk leader yang ingin memperkuat kapasitas personal, kepemimpinan, dan dampak organisasi.",
+    target: "Executive, Founder, Senior Leader",
+  },
 ];
 
 const academyTeasers = [
-  { img: ebookImg, badge: "E-book", title: "ADDIE + Adab: Panduan People Development", price: "Rp 149.000", outcome: "Kerangka kerja yang dapat langsung dipraktikkan HR & L&D." },
-  { img: courseImg, badge: "Online Course", title: "Islamic Leadership Mastery", price: "Rp 1.999.000", outcome: "8 modul, 32 video, sertifikat — untuk pemimpin yang amanah." },
-  { img: webinarImg, badge: "Live Webinar", title: "High-Performance Team dengan Nilai Adab", price: "Rp 299.000", outcome: "Rabu, 7 Mei • 90 menit live + replay 30 hari." },
+  { img: ebookImg, badge: "E-book", title: "ADDIE + Adab: People Development Blueprint", price: "Rp 149.000", outcome: "Kerangka kerja siap pakai untuk HR & L&D." },
+  { img: courseImg, badge: "Online Course", title: "Adab & Science Leadership Mastery", price: "Rp 1.999.000", outcome: "Modul leadership untuk manager hingga C-Level." },
+  { img: webinarImg, badge: "Live Webinar", title: "High-Performance Team with Adab Values", price: "Rp 299.000", outcome: "Sesi 90 menit live + materi pendukung." },
 ];
 
 const testimonials = [
-  { name: "Aditya Pratama", role: "HR Director, BUMN Energi", img: t2, quote: "Pendekatan Pak Faisal berbeda — beliau melakukan diagnosa, bukan sekadar memberi training. ROI-nya terlihat dalam 6 bulan." },
-  { name: "Annisa Rahmawati", role: "L&D Manager, Bank Nasional", img: t1, quote: "Materinya sistematis, fasilitasinya hangat. Tim kami akhirnya bicara hal yang sama dengan bahasa yang sama." },
-  { name: "Reza Hadiansyah", role: "Founder, Startup Fintech", img: t3, quote: "Saya mengikuti Academy untuk mengembangkan tim awal. Praktis, terukur, dan tetap menjaga nilai." },
+  { name: "HR Director", role: "BUMN Energi", img: t2, quote: "Pendekatan Pak Faisal berbeda — beliau melakukan diagnosis, bukan sekadar memberi training. Perubahan perilaku tim terlihat dalam beberapa bulan." },
+  { name: "L&D Manager", role: "Bank Nasional", img: t1, quote: "Materinya sistematis, fasilitasinya hangat. Tim kami akhirnya bicara hal yang sama dengan bahasa yang sama." },
+  { name: "Founder", role: "Startup Pertumbuhan", img: t3, quote: "Saya mengikuti program untuk mengembangkan tim awal. Praktis, terukur, dan tetap menjaga nilai." },
 ];
 
 const Index = () => {
