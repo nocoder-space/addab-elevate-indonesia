@@ -190,7 +190,7 @@ const Index = () => {
             </div>
             <div className="lg:col-span-5">
               <p className="text-muted-foreground leading-relaxed">
-                ADDIE adalah standar instructional design global. Kami memadukannya dengan prinsip adab, amanah, dan ikhlas — sehingga pengembangan SDM menjadi proses yang ilmiah, sekaligus memuliakan manusia.
+                Setiap program dirancang melalui proses ilmiah yang membantu organisasi memahami kebutuhan, mendesain solusi, menjalankan pembelajaran, dan mengevaluasi dampaknya.
               </p>
             </div>
           </div>
@@ -212,31 +212,68 @@ const Index = () => {
         </div>
       </section>
 
-      {/* SERVICES */}
+      {/* VIDEO — Filosofi Faisal Maulana */}
       <section className="section-padding relative overflow-hidden">
+        <div className="absolute -top-32 right-0 w-[480px] h-[480px] bg-gradient-radial-gold blur-3xl opacity-30 pointer-events-none" />
+        <div className="container-wide relative grid lg:grid-cols-12 gap-12 items-center">
+          <div className="lg:col-span-5 order-2 lg:order-1">
+            <div className="eyebrow mb-3">Pengantar</div>
+            <h2 className="font-serif text-3xl md:text-4xl leading-tight">
+              Dengarkan langsung filosofi transformasi dari <span className="text-gradient-gold">Faisal Maulana.</span>
+            </h2>
+            <p className="text-muted-foreground mt-5 leading-relaxed">
+              Sebuah pengantar singkat tentang bagaimana Adab, Science, dan Impact menjadi dasar dalam merancang program pengembangan manusia.
+            </p>
+            <ul className="mt-6 space-y-3 text-sm text-foreground/85">
+              <li className="flex gap-3"><span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" /> Mengapa training harus dimulai dari diagnosis.</li>
+              <li className="flex gap-3"><span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" /> Bagaimana ADDIE membantu program lebih terarah.</li>
+              <li className="flex gap-3"><span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" /> Mengapa adab penting dalam kepemimpinan dan budaya kerja.</li>
+            </ul>
+            <Button asChild className="mt-7 bg-gradient-gold text-primary-foreground shadow-gold">
+              <Link to="/contact">Jadwalkan Diskusi Corporate <ArrowRight className="ml-2 w-4 h-4" /></Link>
+            </Button>
+          </div>
+          <div className="lg:col-span-7 order-1 lg:order-2">
+            <VideoEmbed videoId="S8A85niP3lU" query="si=EN0C7S_ppH2aMMvS" title="Adab. Science. Impact. — Pengantar Faisal Maulana" />
+          </div>
+        </div>
+      </section>
+
+      {/* SIGNATURE PROGRAMS */}
+      <section className="section-padding relative overflow-hidden border-y border-border/60">
         <div className="absolute inset-0 -z-10">
-          <img src={servicesBg} alt="" aria-hidden="true" className="w-full h-full object-cover opacity-[0.12]" />
+          <img src={servicesBg} alt="" aria-hidden="true" className="w-full h-full object-cover opacity-[0.10]" />
           <div className="absolute inset-0 bg-gradient-to-b from-background via-background/90 to-background" />
         </div>
         <div className="container-wide">
-          <div className="text-center max-w-2xl mx-auto mb-14">
-            <div className="eyebrow mb-3">Program Korporasi</div>
-            <h2 className="font-serif text-4xl md:text-5xl leading-tight">Dirancang untuk hasil bisnis, dijalankan dengan adab.</h2>
-            <p className="text-muted-foreground mt-4">Enam fokus area yang paling sering dibutuhkan korporasi Indonesia — semuanya dapat dikustomisasi sesuai konteks tim Anda.</p>
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <div className="eyebrow mb-3">Signature Programs</div>
+            <h2 className="font-serif text-4xl md:text-5xl leading-tight">Signature Programs untuk perubahan perilaku dan hasil bisnis.</h2>
+            <p className="text-muted-foreground mt-4">Dirancang untuk kebutuhan organisasi yang ingin training tidak berhenti sebagai acara, tetapi menjadi proses transformasi yang terarah.</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((s, i) => (
+          <div className="grid md:grid-cols-2 gap-6">
+            {signaturePrograms.map((s, i) => (
               <div key={i} className="card-premium p-7 flex flex-col group">
-                <div className="text-xs uppercase tracking-wider text-primary mb-3">Outcome</div>
-                <p className="text-sm text-foreground/90 mb-5 font-medium">{s.outcome}</p>
-                <h3 className="font-serif text-2xl mb-3 leading-snug">{s.title}</h3>
+                <div className="text-xs uppercase tracking-wider text-primary mb-3">0{i + 1} • Signature Program</div>
+                <h3 className="font-serif text-2xl md:text-3xl mb-3 leading-snug">{s.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed flex-1">{s.desc}</p>
-                <Link to="/corporate" className="mt-6 inline-flex items-center gap-2 text-sm text-primary font-medium group-hover:gap-3 transition-all">
-                  Pelajari program <ArrowUpRight className="w-4 h-4" />
-                </Link>
+                <div className="mt-5 pt-5 border-t border-border/60 flex items-center justify-between gap-4">
+                  <div className="text-xs text-muted-foreground">
+                    <span className="text-foreground/70 font-medium">Target:</span> {s.target}
+                  </div>
+                  <Link to="/corporate" className="inline-flex items-center gap-2 text-sm text-primary font-medium group-hover:gap-3 transition-all flex-shrink-0">
+                    Detail <ArrowUpRight className="w-4 h-4" />
+                  </Link>
+                </div>
               </div>
             ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <Link to="/corporate" className="text-sm text-primary font-medium inline-flex items-center gap-2 hover:gap-3 transition-all">
+              Lihat semua program korporasi <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       </section>
