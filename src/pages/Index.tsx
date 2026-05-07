@@ -92,7 +92,7 @@ const Index = () => {
           <div className="lg:col-span-7 xl:col-span-6 reveal">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/40 bg-background/60 backdrop-blur-sm mb-7">
               <Sparkles className="w-3.5 h-3.5 text-primary" />
-              <span className="text-[11px] uppercase tracking-[0.25em] text-primary font-semibold">ADDIE + Adab Framework</span>
+              <span className="text-[11px] uppercase tracking-[0.25em] text-primary font-semibold">Adab • Science • Impact</span>
             </div>
 
             <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-[4.25rem] leading-[1.04] font-medium text-foreground">
@@ -100,7 +100,7 @@ const Index = () => {
             </h1>
 
             <p className="mt-6 text-base md:text-lg text-foreground/80 max-w-xl leading-relaxed">
-              Saya membantu perusahaan Indonesia membangun manusia — bukan sekadar melatih karyawan. Memadukan instructional design, experiential learning, dan nilai humanis Islami untuk transformasi yang berakhlak dan berdampak.
+              Faisal Maulana membantu organisasi menciptakan perubahan perilaku yang nyata melalui pendekatan ADDIE, experiential learning, dan nilai adab yang relevan dengan dunia kerja modern.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -108,18 +108,19 @@ const Index = () => {
                 <Link to="/contact">Konsultasi Gratis <ArrowRight className="ml-2 w-4 h-4" /></Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="h-13 px-7 border-foreground/25 bg-background/40 backdrop-blur-sm hover:border-primary hover:bg-primary/10">
-                <Link to="/academy">Jelajahi Academy</Link>
+                <Link to="/corporate">Lihat Signature Programs</Link>
               </Button>
             </div>
 
-            <div className="mt-10 grid grid-cols-3 gap-4 max-w-lg pt-6 border-t border-border/60">
+            <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-xl pt-6 border-t border-border/60">
               {[
-                { n: "18+", l: "Tahun pengalaman" },
-                { n: "200+", l: "Korporasi & institusi" },
-                { n: "100K+", l: "Peserta terlatih" },
+                { n: "18+", l: "Tahun" },
+                { n: "200+", l: "Perusahaan" },
+                { n: "500+", l: "Event" },
+                { n: "100K+", l: "Peserta" },
               ].map(s => (
                 <div key={s.l}>
-                  <div className="font-serif text-2xl md:text-4xl text-gradient-gold">{s.n}</div>
+                  <div className="font-serif text-2xl md:text-3xl text-gradient-gold">{s.n}</div>
                   <div className="text-[10px] md:text-xs uppercase tracking-wider text-muted-foreground mt-1.5">{s.l}</div>
                 </div>
               ))}
@@ -129,7 +130,7 @@ const Index = () => {
               <div className="flex">
                 {[...Array(5)].map((_, i) => <Star key={i} className="w-3.5 h-3.5 fill-primary text-primary" />)}
               </div>
-              <span>4.9 / 5 — dari 23.000+ peserta korporasi</span>
+              <span>International Certified Trainer • Mendampingi 200+ organisasi lintas industri</span>
             </div>
           </div>
 
@@ -151,14 +152,16 @@ const Index = () => {
           <div className="text-center max-w-3xl mx-auto">
             <div className="eyebrow mb-4">Filosofi</div>
             <h2 className="font-serif text-4xl md:text-5xl leading-tight">
-              Menjembatani jurang antara <em className="text-gradient-gold not-italic">strategi dan eksekusi</em>, ilmu dan perilaku, pelatihan dan transformasi.
+              Menjembatani jurang antara <em className="text-gradient-gold not-italic">strategi dan eksekusi.</em>
             </h2>
             <div className="mx-auto my-8 h-px w-16 bg-gradient-to-r from-transparent via-primary to-transparent" />
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Banyak program pengembangan SDM gagal bukan karena materinya buruk — tetapi karena memperlakukan manusia sebagai aset, bukan amanah. Pendekatan saya menempatkan martabat manusia sebagai pusat: ilmu sebagai struktur, adab sebagai jiwa, dan dampak bisnis sebagai bukti.
+              Banyak organisasi memiliki visi besar, target ambisius, dan strategi yang matang. Namun transformasi sering berhenti di ruang meeting karena tidak turun menjadi perilaku harian. Di sinilah pengembangan manusia harus dirancang secara lebih serius: menyentuh mindset, komunikasi, kolaborasi, dan cara kerja tim.
             </p>
-            <p className="font-arabic text-2xl text-primary mt-8">"خَيْرُ النَّاسِ أَنْفَعُهُمْ لِلنَّاسِ"</p>
-            <p className="text-sm text-muted-foreground italic mt-2">"Sebaik-baik manusia adalah yang paling bermanfaat bagi sesamanya."</p>
+            <p className="font-serif text-xl md:text-2xl text-foreground/90 italic mt-8 leading-snug">
+              "Transformasi bukan dimulai dari materi training, tetapi dari perilaku yang benar-benar berubah."
+            </p>
+            <p className="text-xs uppercase tracking-[0.25em] text-primary mt-3">Adab • Science • Impact</p>
           </div>
         </div>
       </section>
