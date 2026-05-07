@@ -283,12 +283,13 @@ const Index = () => {
         <div className="absolute top-10 right-10 w-72 h-72 bg-signal/30 blur-3xl rounded-full" />
         <div className="container-wide relative">
           <div className="flex flex-wrap items-end justify-between gap-6 mb-12">
-            <div>
+            <div className="max-w-2xl">
               <div className="text-xs uppercase tracking-[0.25em] text-surface-light-foreground/60 mb-3">Faisal Maulana Academy</div>
-              <h2 className="font-serif text-4xl md:text-5xl leading-tight max-w-2xl">Belajar kapan saja, dari mana saja — dengan kualitas korporasi.</h2>
+              <h2 className="font-serif text-4xl md:text-5xl leading-tight">Belajar kapan saja, dari mana saja — dengan kualitas korporasi.</h2>
+              <p className="text-surface-light-foreground/70 mt-4 max-w-xl">E-book, webinar, dan online course yang disusun dari pengalaman lapangan mendampingi organisasi dan profesional Indonesia.</p>
             </div>
             <Button asChild size="lg" className="bg-signal text-signal-foreground hover:bg-signal/90 h-12 px-6 font-semibold">
-              <Link to="/academy">Buka Toko Academy <ArrowRight className="ml-2 w-4 h-4" /></Link>
+              <Link to="/academy">Telusuri Academy <ArrowRight className="ml-2 w-4 h-4" /></Link>
             </Button>
           </div>
 
@@ -321,6 +322,7 @@ const Index = () => {
             <div className="max-w-2xl">
               <div className="eyebrow mb-3">Momen di Lapangan</div>
               <h2 className="font-serif text-4xl md:text-5xl leading-tight">Dari ruang kelas korporasi hingga panggung nasional.</h2>
+              <p className="text-muted-foreground mt-4">Setiap program dirancang untuk menciptakan pengalaman belajar yang hidup, relevan, dan dapat ditindaklanjuti.</p>
             </div>
             <div className="hidden md:flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-muted-foreground">
               <span className="h-px w-12 bg-primary/40" />
