@@ -1,16 +1,17 @@
 import { Calendar, MapPin, Users, ArrowRight, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import VideoEmbed from "@/components/VideoEmbed";
 import workshopImg from "@/assets/event-corporate-training.webp";
 import webinarImg from "@/assets/event-engagement-class.webp";
 import trainingImg from "@/assets/event-leadership-workshop.webp";
 import bootcampImg from "@/assets/event-capacity-building.webp";
 
 const events = [
-  { type: "Webinar Live", img: webinarImg, title: "Membangun Tim High-Performance dengan Nilai Adab", date: "7 Mei 2026", time: "19:30 WIB", location: "Online via Zoom", seats: "100 peserta", price: "Rp 299.000", featured: true },
-  { type: "Public Workshop", img: workshopImg, title: "Sales & Marketing Champion — Public Class Jakarta", date: "22-23 Mei 2026", time: "09:00 – 17:00 WIB", location: "Hotel Mulia Senayan, Jakarta", seats: "30 peserta", price: "Rp 4.500.000", featured: false },
-  { type: "Webinar Live", img: trainingImg, title: "Strategi People Development untuk Startup Bertumbuh", date: "12 Juni 2026", time: "20:00 WIB", location: "Online via Zoom", seats: "200 peserta", price: "Rp 199.000", featured: false },
-  { type: "Public Workshop", img: bootcampImg, title: "Transformational Leadership Bootcamp", date: "5-7 Juli 2026", time: "Full day", location: "Bandung", seats: "25 peserta", price: "Rp 7.500.000", featured: false },
+  { type: "Webinar Live", img: webinarImg, title: "High-Performance Team with Adab Values", date: "Coming Soon", time: "Diumumkan via email", location: "Online via Zoom", seats: "100 peserta", price: "Batch berikutnya segera dibuka", featured: true },
+  { type: "Public Workshop", img: workshopImg, title: "Transformational Sales & Mindset Champion — Public Class Jakarta", date: "Coming Soon", time: "Full day", location: "Jakarta", seats: "30 peserta", price: "Waiting list dibuka", featured: false },
+  { type: "Webinar Live", img: trainingImg, title: "People Development Architect for Growing Organizations", date: "Coming Soon", time: "Diumumkan via email", location: "Online via Zoom", seats: "200 peserta", price: "Batch berikutnya segera dibuka", featured: false },
+  { type: "Public Workshop", img: bootcampImg, title: "Adab & Science Leadership Bootcamp", date: "Coming Soon", time: "Full day", location: "Bandung / Bogor", seats: "25 peserta", price: "Waiting list dibuka", featured: false },
 ];
 
 const Events = () => (
@@ -19,8 +20,8 @@ const Events = () => (
       <div className="container-wide">
         <div className="max-w-3xl">
           <div className="eyebrow mb-4">Acara & Pelatihan Publik</div>
-          <h1 className="font-serif text-5xl md:text-6xl leading-tight">Belajar langsung — dalam <em className="text-gradient-gold not-italic">ruang yang terjaga.</em></h1>
-          <p className="mt-6 text-lg text-muted-foreground max-w-2xl">Webinar, public workshop, dan bootcamp eksklusif. Setiap acara dirancang dengan kapasitas terbatas agar setiap peserta mendapatkan perhatian penuh.</p>
+          <h1 className="font-serif text-5xl md:text-6xl leading-tight">Belajar langsung dalam ruang <em className="text-gradient-gold not-italic">kecil, intensif, dan berdampak.</em></h1>
+          <p className="mt-6 text-lg text-muted-foreground max-w-2xl">Webinar, public workshop, dan bootcamp eksklusif yang dirancang agar setiap peserta mendapatkan pengalaman belajar yang relevan, praktis, dan dapat ditindaklanjuti.</p>
         </div>
       </div>
     </section>
