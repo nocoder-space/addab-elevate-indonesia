@@ -186,8 +186,8 @@ const Academy = () => {
           <div className="grid lg:grid-cols-12 gap-10">
             <div className="lg:col-span-5">
               <div className="eyebrow mb-3">Inner Circle</div>
-              <h2 className="font-serif text-4xl md:text-5xl leading-tight">Membership untuk profesional yang ingin terus tumbuh.</h2>
-              <p className="text-muted-foreground mt-5 leading-relaxed">Sebuah lingkaran kecil — terjaga, hangat, dan bergerak bersama. Akses langsung ke pengetahuan, template, dan komunitas yang biasanya hanya tersedia untuk klien korporasi.</p>
+              <h2 className="font-serif text-4xl md:text-5xl leading-tight">Inner Circle Faisal Maulana.</h2>
+              <p className="text-muted-foreground mt-5 leading-relaxed">Komunitas belajar untuk profesional yang ingin memperkuat mindset, leadership, komunikasi, dan people development secara berkelanjutan.</p>
             </div>
             <div className="lg:col-span-7">
               <div className="card-premium p-8 md:p-10 relative overflow-hidden">
