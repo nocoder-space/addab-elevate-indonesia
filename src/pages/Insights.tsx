@@ -40,8 +40,8 @@ const Insights = () => (
       <div className="container-wide">
         <div className="max-w-3xl">
           <div className="eyebrow mb-4">Insights & Pengetahuan</div>
-          <h1 className="font-serif text-5xl md:text-6xl leading-tight">Knowledge center untuk profesional yang serius dengan <em className="text-gradient-gold not-italic">people development.</em></h1>
-          <p className="mt-6 text-lg text-muted-foreground max-w-2xl">Artikel mendalam, panduan praktis, dan tools yang dipakai oleh HR, L&D, dan eksekutif untuk membangun manusia yang lebih baik.</p>
+          <h1 className="font-serif text-5xl md:text-6xl leading-tight">Knowledge center untuk profesional yang serius dengan <em className="text-gradient-gold not-italic">transformasi manusia.</em></h1>
+          <p className="mt-6 text-lg text-muted-foreground max-w-2xl">Artikel, panduan praktis, dan tools berbasis Adab, Science, dan Impact untuk HR, L&D, leader, dan eksekutif.</p>
         </div>
         <div className="mt-10 max-w-xl relative">
           <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />

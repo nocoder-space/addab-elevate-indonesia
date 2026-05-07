@@ -206,6 +206,14 @@ const Contact = () => {
             </div>
 
             <div className="card-premium p-7">
+              <div className="eyebrow mb-3">Kenali Pendekatan dalam 3 Menit</div>
+              <p className="text-sm text-muted-foreground mb-4">Sebelum mengirim inquiry, Anda dapat menonton pengantar singkat tentang pendekatan Adab, Science, dan Impact.</p>
+              <Button asChild variant="outline" size="sm" className="border-primary/40 hover:bg-primary/10">
+                <a href="https://www.youtube.com/watch?v=S8A85niP3lU" target="_blank" rel="noopener noreferrer">Tonton Video Pengantar</a>
+              </Button>
+            </div>
+
+            <div className="card-premium p-7">
               <div className="eyebrow mb-4">Pertanyaan Umum</div>
               <Accordion type="single" collapsible>
                 {faqs.map((f, i) => (
