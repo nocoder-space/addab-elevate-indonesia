@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { ArrowRight, Star, Clock, Users, Award, BookOpen, Video, Crown, Check } from "lucide-react";
+import { ArrowRight, Clock, Users, Award, BookOpen, Video, Crown, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import VideoEmbed from "@/components/VideoEmbed";
 import ebookImg from "@/assets/ebook-mockup.jpg";
 import courseImg from "@/assets/course-mockup.jpg";
 import webinarImg from "@/assets/webinar-mockup.jpg";
@@ -9,12 +10,12 @@ import socialBg from "@/assets/event-ballroom.webp";
 import membershipBg from "@/assets/event-roleplay.webp";
 
 const products = [
-  { type: "E-book", img: ebookImg, title: "ADDIE + Adab: Panduan People Development", who: "HR, L&D, founder", outcome: "Kerangka kerja siap pakai dalam 5 jam baca", price: "Rp 149.000", featured: false },
-  { type: "E-book", img: ebookImg, title: "5 Framework Kepemimpinan Islami", who: "Manager dan supervisor", outcome: "Kepemimpinan yang amanah dan dipercaya", price: "Rp 99.000", featured: false },
-  { type: "Course", img: courseImg, title: "Islamic Leadership Mastery", who: "Manager – C-Level", outcome: "8 modul, 32 video, sertifikat resmi", price: "Rp 1.999.000", featured: true },
-  { type: "Course", img: courseImg, title: "Sales Psychology Masterclass", who: "Sales rep dan team leader", outcome: "Naik konversi 30% dalam 90 hari", price: "Rp 1.799.000", featured: false },
+  { type: "E-book", img: ebookImg, title: "ADDIE + Adab: People Development Blueprint", who: "HR, L&D, founder", outcome: "Kerangka kerja siap pakai dalam 5 jam baca", price: "Rp 149.000", featured: false },
+  { type: "E-book", img: ebookImg, title: "5 Framework Kepemimpinan Beradab", who: "Manager dan supervisor", outcome: "Kepemimpinan yang amanah dan dipercaya", price: "Rp 99.000", featured: false },
+  { type: "Course", img: courseImg, title: "Adab & Science Leadership Mastery", who: "Manager – C-Level", outcome: "8 modul, 32 video, sertifikat resmi", price: "Rp 1.999.000", featured: true },
+  { type: "Course", img: courseImg, title: "Transformational Sales & Mindset Champion", who: "Sales rep dan team leader", outcome: "Kerangka mindset dan teknik closing", price: "Rp 1.799.000", featured: false },
   { type: "Bundle", img: ebookImg, title: "People Development Starter Pack", who: "HR yang baru memulai", outcome: "3 e-book + 1 mini course + template", price: "Rp 499.000", featured: true },
-  { type: "Webinar", img: webinarImg, title: "High-Performance Team dengan Adab", who: "Founder dan team leader", outcome: "Live 90 menit + replay 30 hari", price: "Rp 299.000", featured: false },
+  { type: "Webinar", img: webinarImg, title: "High-Performance Team with Adab Values", who: "Founder dan team leader", outcome: "Live 90 menit + materi pendukung", price: "Rp 299.000", featured: false },
 ];
 
 const membership = [
@@ -22,7 +23,7 @@ const membership = [
   "Library template HR & L&D yang terus diperbarui",
   "Akses prioritas ke webinar dan event eksklusif",
   "Komunitas privat profesional people development",
-  "Diskon 30% untuk seluruh produk Academy",
+  "Diskon untuk seluruh produk Academy",
 ];
 
 const Academy = () => {
