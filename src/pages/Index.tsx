@@ -35,31 +35,31 @@ const addieStages = [
 
 const signaturePrograms = [
   {
-    title: "Adab & Science Leadership Mastery",
-    desc: "Program kepemimpinan untuk membangun leader yang adaptif, berintegritas, komunikatif, dan mampu menggerakkan tim.",
-    target: "Manager, Supervisor, Leader, C-Level",
-  },
-  {
-    title: "Transformational Sales & Mindset Champion",
-    desc: "Program untuk membangun sales team yang disiplin, percaya diri, customer-centric, dan berorientasi pada hasil jangka panjang.",
+    title: "Sales & Marketing Champion",
+    desc: "Program untuk membangun tim sales yang lebih disiplin, percaya diri, customer-centric, dan konsisten mengejar target dengan pendekatan yang terarah.",
     target: "Sales Team, Business Development, Marketing Team",
   },
   {
-    title: "Experiential People Development Architect",
-    desc: "Program untuk HR, L&D, dan internal trainer dalam merancang proses people development yang lebih sistematis dan berdampak.",
-    target: "HR, L&D, Internal Trainer",
+    title: "Impactful Communication Skill",
+    desc: "Program untuk memperkuat cara menyampaikan pesan, mendengarkan, membangun engagement, dan menciptakan kolaborasi yang lebih efektif.",
+    target: "Leader, Staff, Frontliner, Professional",
   },
   {
-    title: "Executive Transformation Journey",
-    desc: "Coaching dan pendampingan premium untuk leader yang ingin memperkuat kapasitas personal, kepemimpinan, dan dampak organisasi.",
-    target: "Executive, Founder, Senior Leader",
+    title: "Transformational Leadership Mastery",
+    desc: "Program untuk membantu leader menggerakkan tim, membangun kepercayaan, memperkuat mindset, dan menerjemahkan strategi menjadi aksi.",
+    target: "Manager, Supervisor, Leader",
+  },
+  {
+    title: "Team Synergy & Trust Building",
+    desc: "Program untuk memperkuat kepercayaan, kolaborasi, komunikasi tim, dan energi kerja bersama melalui aktivitas experiential.",
+    target: "Team, Division, Organization",
   },
 ];
 
 const academyTeasers = [
-  { img: ebookImg, badge: "E-book", title: "ADDIE + Adab: People Development Blueprint", price: "Rp 149.000", outcome: "Kerangka kerja siap pakai untuk HR & L&D." },
-  { img: courseImg, badge: "Online Course", title: "Adab & Science Leadership Mastery", price: "Rp 1.999.000", outcome: "Modul leadership untuk manager hingga C-Level." },
-  { img: webinarImg, badge: "Live Webinar", title: "High-Performance Team with Adab Values", price: "Rp 299.000", outcome: "Sesi 90 menit live + materi pendukung." },
+  { img: ebookImg, badge: "Digital Book", title: "Public Speaking Pro", price: "Lihat Detail", outcome: "Panduan untuk membangun kepercayaan diri, menyusun pesan, dan menjadikan public speaking sebagai aset karier dan bisnis." },
+  { img: ebookImg, badge: "Digital Book", title: "Defeat Demotivation", price: "Lihat Detail", outcome: "Panduan untuk mengatasi demotivasi, membangun kembali energi kerja, dan memperkuat mindset pertumbuhan." },
+  { img: webinarImg, badge: "Mini Masterclass", title: "Mini Masterclass Public Speaking", price: "Lihat Detail", outcome: "Program singkat untuk mengatasi rasa takut bicara di depan umum dan tampil lebih percaya diri." },
 ];
 
 const testimonials = [
@@ -76,7 +76,7 @@ const Index = () => {
         <div className="absolute inset-0">
           <img
             src={heroImg}
-            alt="Faisal Maulana — People Development Expert Indonesia"
+            alt="Faisal Maulana — Transformational People Development"
             className="w-full h-full object-cover object-[75%_center] md:object-[68%_center]"
             width={1920}
             height={1280}
@@ -100,7 +100,7 @@ const Index = () => {
             </h1>
 
             <p className="mt-6 text-base md:text-lg text-foreground/80 max-w-xl leading-relaxed">
-              Faisal Maulana membantu organisasi menciptakan perubahan perilaku yang nyata melalui pendekatan ADDIE, experiential learning, dan nilai adab yang relevan dengan dunia kerja modern.
+              Melalui ADDIE + ADAB Framework, Faisal Maulana membantu organisasi menjembatani strategi, perilaku, dan dampak bisnis secara lebih terarah.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -108,7 +108,7 @@ const Index = () => {
                 <Link to="/contact">Konsultasi Gratis <ArrowRight className="ml-2 w-4 h-4" /></Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="h-13 px-7 border-foreground/25 bg-background/40 backdrop-blur-sm hover:border-primary hover:bg-primary/10">
-                <Link to="/corporate">Lihat Signature Programs</Link>
+                <Link to="/academy">Jelajahi Academy</Link>
               </Button>
             </div>
 
@@ -156,7 +156,7 @@ const Index = () => {
             </h2>
             <div className="mx-auto my-8 h-px w-16 bg-gradient-to-r from-transparent via-primary to-transparent" />
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Banyak organisasi memiliki visi besar, target ambisius, dan strategi yang matang. Namun transformasi sering berhenti di ruang meeting karena tidak turun menjadi perilaku harian. Di sinilah pengembangan manusia harus dirancang secara lebih serius: menyentuh mindset, komunikasi, kolaborasi, dan cara kerja tim.
+              Banyak organisasi memiliki visi besar, target ambisius, dan strategi yang matang. Namun transformasi sering berhenti di ruang meeting karena tidak turun menjadi perilaku harian. Di sinilah pengembangan manusia perlu dirancang lebih serius: menyentuh mindset, komunikasi, kolaborasi, dan cara kerja tim.
             </p>
             <p className="font-serif text-xl md:text-2xl text-foreground/90 italic mt-8 leading-snug">
               "Transformasi bukan dimulai dari materi training, tetapi dari perilaku yang benar-benar berubah."
@@ -185,12 +185,12 @@ const Index = () => {
             <div className="lg:col-span-7">
               <div className="eyebrow mb-3">Metodologi</div>
               <h2 className="font-serif text-4xl md:text-5xl leading-tight">
-                Kerangka <span className="text-gradient-gold">ADDIE + Adab</span> — proses transformasi yang sistematis.
+                <span className="text-gradient-gold">ADDIE + ADAB Framework</span> — proses transformasi yang sistematis.
               </h2>
             </div>
             <div className="lg:col-span-5">
               <p className="text-muted-foreground leading-relaxed">
-                Setiap program dirancang melalui proses ilmiah yang membantu organisasi memahami kebutuhan, mendesain solusi, menjalankan pembelajaran, dan mengevaluasi dampaknya.
+                ADDIE memastikan program dirancang secara terstruktur. ADAB memastikan pembelajaran terhubung dengan nilai, perubahan perilaku, dan dampak bisnis.
               </p>
             </div>
           </div>
