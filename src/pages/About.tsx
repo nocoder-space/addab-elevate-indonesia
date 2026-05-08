@@ -11,7 +11,7 @@ const timeline = [
   { phase: "Awal Karier", desc: "Memulai perjalanan sebagai trainer, belajar bahwa transformasi sejati dimulai dari diagnosis, bukan motivasi sesaat." },
   { phase: "Pendalaman Metodologi", desc: "Mendalami ADDIE Model, Kirkpatrick Evaluation, dan instructional design dari berbagai institusi global." },
   { phase: "Kemitraan Korporasi", desc: "Menjadi training partner bagi perusahaan multinasional di sektor perbankan, asuransi, telekomunikasi, dan FMCG." },
-  { phase: "Integrasi Nilai Adab", desc: "Memformalkan kerangka 'ADDIE + Adab' — memadukan rigor ilmiah dengan nilai adab yang inklusif dan profesional." },
+  { phase: "Integrasi Nilai Adab", desc: "Memformalkan ADDIE + ADAB Framework — memadukan rigor ilmiah dengan nilai adab yang inklusif dan profesional." },
   { phase: "Pengembangan Academy", desc: "Membuka akses pengetahuan korporasi kepada UMKM, founder, dan profesional di seluruh Indonesia." },
   { phase: "Ekosistem Pembelajaran", desc: "Lebih dari 200 organisasi dan 100.000+ peserta telah mengikuti program — dan terus bertumbuh." },
 ];
@@ -50,7 +50,7 @@ const About = () => (
         </div>
         <div className="lg:col-span-5">
           <div className="aspect-square rounded-3xl overflow-hidden border border-primary/20 shadow-elegant">
-            <img src={portrait} alt="Faisal Maulana — Transformational People Development Expert" className="w-full h-full object-cover" width={1024} height={1024} />
+            <img src={portrait} alt="Faisal Maulana — Transformational People Development" className="w-full h-full object-cover" width={1024} height={1024} />
           </div>
         </div>
       </div>
@@ -68,7 +68,7 @@ const About = () => (
         <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
           <p>Saya memulai karier sebagai trainer muda yang penuh semangat, namun bingung. Saya melihat banyak program training yang meriah di kelas, tapi sunyi dampaknya. Peserta tertawa, tepuk tangan, lalu kembali ke meja kerja seperti tidak terjadi apa-apa.</p>
           <p>Saya mempelajari ADDIE — kerangka instructional design yang dipakai militer dan korporasi global. Disiplin ilmiahnya membuka mata saya. Tapi sesuatu masih terasa kurang.</p>
-          <p>Saya percaya bahwa pengembangan manusia tidak boleh hanya soal performa. Harus ada adab. Harus ada kehormatan. Harus ada ketulusan. <span className="text-foreground/95">Nilai adab yang saya yakini bersifat universal dalam dunia kerja: amanah, empati, integritas, tanggung jawab, dan cara memperlakukan manusia dengan martabat.</span> Maka lahirlah <span className="text-primary font-medium">ADDIE + Adab</span> — bukan sebagai jargon, tapi sebagai cara kerja.</p>
+          <p>Saya percaya bahwa pengembangan manusia tidak boleh hanya soal performa. Bagi saya, adab bukan label yang sempit. <span className="text-foreground/95">Adab adalah cara memperlakukan manusia dengan martabat: amanah, empati, integritas, dan tanggung jawab.</span> Maka lahirlah <span className="text-primary font-medium">ADDIE + ADAB Framework</span> — bukan sebagai jargon, tapi sebagai cara kerja.</p>
           <p>Hari ini, saya membantu HR, leader, dan eksekutif Indonesia merancang program yang bukan hanya menaikkan KPI, tapi juga menjaga martabat manusia yang dilatih.</p>
         </div>
       </div>
