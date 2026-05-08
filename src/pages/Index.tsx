@@ -296,7 +296,7 @@ const Index = () => {
 
           <div className="text-center mt-10">
             <Link to="/corporate" className="text-sm text-primary font-medium inline-flex items-center gap-2 hover:gap-3 transition-all">
-              Lihat semua program korporasi <ArrowRight className="w-4 h-4" />
+              Lihat Corporate Solutions <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
@@ -310,7 +310,7 @@ const Index = () => {
             <div className="max-w-2xl">
               <div className="text-xs uppercase tracking-[0.25em] text-surface-light-foreground/60 mb-3">Faisal Maulana Academy</div>
               <h2 className="font-serif text-4xl md:text-5xl leading-tight">Belajar kapan saja, dari mana saja — dengan kualitas korporasi.</h2>
-              <p className="text-surface-light-foreground/70 mt-4 max-w-xl">E-book, webinar, dan online course yang disusun dari pengalaman lapangan mendampingi organisasi dan profesional Indonesia.</p>
+              <p className="text-surface-light-foreground/70 mt-4 max-w-xl">Digital books dan mini masterclass yang diringkas dari pengalaman lapangan dalam communication, mindset, leadership, dan people development.</p>
             </div>
             <Button asChild size="lg" className="bg-signal text-signal-foreground hover:bg-signal/90 h-12 px-6 font-semibold">
               <Link to="/academy">Telusuri Academy <ArrowRight className="ml-2 w-4 h-4" /></Link>
@@ -328,8 +328,8 @@ const Index = () => {
                   <h3 className="font-serif text-xl mb-2 leading-snug">{p.title}</h3>
                   <p className="text-sm text-muted-foreground mb-5 leading-relaxed">{p.outcome}</p>
                   <div className="flex items-center justify-between">
-                    <span className="font-serif text-2xl text-foreground">{p.price}</span>
-                    <Button size="sm" className="bg-signal text-signal-foreground hover:bg-signal/90 font-semibold">Beli</Button>
+                    <span className="font-serif text-base text-muted-foreground">{p.price}</span>
+                    <Button size="sm" className="bg-signal text-signal-foreground hover:bg-signal/90 font-semibold">Lihat Produk</Button>
                   </div>
                 </div>
               </div>
