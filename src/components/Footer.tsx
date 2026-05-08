@@ -12,11 +12,11 @@ const Footer = () => (
             <img src={logoFaisal} alt="Faisal Maulana logo" width={44} height={44} className="w-11 h-11 rounded-full object-contain ring-1 ring-primary/40 shadow-gold" />
             <div>
               <div className="font-serif font-semibold text-lg">Faisal Maulana</div>
-              <div className="text-[10px] uppercase tracking-[0.2em] text-primary">Transformational People Development Expert</div>
+              <div className="text-[10px] uppercase tracking-[0.2em] text-primary">Transformational People Development</div>
             </div>
           </div>
           <p className="text-sm text-muted-foreground leading-relaxed max-w-sm">
-            Membantu organisasi mengubah strategi menjadi perilaku kerja nyata melalui pendekatan <span className="text-primary">ADDIE</span>, experiential learning, dan nilai adab yang inklusif.
+            Membantu organisasi mengubah strategi menjadi perilaku kerja nyata melalui <span className="text-primary">ADDIE + ADAB Framework</span>, experiential learning, dan nilai adab yang inklusif.
           </p>
           <p className="mt-3 text-[11px] uppercase tracking-[0.25em] text-primary/80">Adab • Science • Impact</p>
           <div className="flex gap-3 mt-6">
@@ -31,8 +31,8 @@ const Footer = () => (
         <div className="md:col-span-2">
           <div className="text-xs uppercase tracking-[0.2em] text-primary mb-4">Korporasi</div>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li><Link to="/corporate" className="hover:text-foreground">Signature Programs</Link></li>
-            <li><Link to="/corporate" className="hover:text-foreground">Kerangka ADDIE</Link></li>
+            <li><Link to="/corporate" className="hover:text-foreground">Corporate Solutions</Link></li>
+            <li><Link to="/corporate" className="hover:text-foreground">ADDIE + ADAB Framework</Link></li>
             <li><Link to="/corporate" className="hover:text-foreground">Studi Kasus</Link></li>
             <li><Link to="/contact" className="hover:text-foreground">Konsultasi</Link></li>
           </ul>
@@ -41,8 +41,8 @@ const Footer = () => (
         <div className="md:col-span-2">
           <div className="text-xs uppercase tracking-[0.2em] text-primary mb-4">Academy</div>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li><Link to="/academy" className="hover:text-foreground">E-book</Link></li>
-            <li><Link to="/academy" className="hover:text-foreground">Online Course</Link></li>
+            <li><Link to="/academy" className="hover:text-foreground">Digital Books</Link></li>
+            <li><Link to="/academy" className="hover:text-foreground">Mini Masterclass</Link></li>
             <li><Link to="/academy" className="hover:text-foreground">Webinar</Link></li>
             <li><Link to="/academy" className="hover:text-foreground">Membership</Link></li>
           </ul>

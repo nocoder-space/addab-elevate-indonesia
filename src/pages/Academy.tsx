@@ -10,12 +10,12 @@ import socialBg from "@/assets/event-ballroom.webp";
 import membershipBg from "@/assets/event-roleplay.webp";
 
 const products = [
-  { type: "E-book", img: ebookImg, title: "ADDIE + Adab: People Development Blueprint", who: "HR, L&D, founder", outcome: "Kerangka kerja siap pakai dalam 5 jam baca", price: "Rp 149.000", featured: false },
-  { type: "E-book", img: ebookImg, title: "5 Framework Kepemimpinan Beradab", who: "Manager dan supervisor", outcome: "Kepemimpinan yang amanah dan dipercaya", price: "Rp 99.000", featured: false },
-  { type: "Course", img: courseImg, title: "Adab & Science Leadership Mastery", who: "Manager – C-Level", outcome: "8 modul, 32 video, sertifikat resmi", price: "Rp 1.999.000", featured: true },
-  { type: "Course", img: courseImg, title: "Transformational Sales & Mindset Champion", who: "Sales rep dan team leader", outcome: "Kerangka mindset dan teknik closing", price: "Rp 1.799.000", featured: false },
-  { type: "Bundle", img: ebookImg, title: "People Development Starter Pack", who: "HR yang baru memulai", outcome: "3 e-book + 1 mini course + template", price: "Rp 499.000", featured: true },
-  { type: "Webinar", img: webinarImg, title: "High-Performance Team with Adab Values", who: "Founder dan team leader", outcome: "Live 90 menit + materi pendukung", price: "Rp 299.000", featured: false },
+  { type: "Digital Book", img: ebookImg, title: "Public Speaking Pro", who: "Profesional, leader, founder", outcome: "Membangun kepercayaan diri, menyusun pesan, dan menjadikan public speaking sebagai aset karier dan bisnis.", price: "Lihat Detail", featured: true, status: "active" },
+  { type: "Digital Book", img: ebookImg, title: "Defeat Demotivation", who: "Individu dan profesional", outcome: "Mengatasi demotivasi, membangun kembali energi kerja, dan memperkuat mindset pertumbuhan.", price: "Lihat Detail", featured: false, status: "active" },
+  { type: "Mini Masterclass", img: webinarImg, title: "Mini Masterclass Public Speaking", who: "Pemula yang ingin tampil percaya diri", outcome: "Mengatasi rasa takut bicara di depan umum, menyusun pesan, dan tampil lebih percaya diri.", price: "Lihat Detail", featured: true, status: "active" },
+  { type: "Coming Soon", img: courseImg, title: "Sales Psychology Masterclass", who: "Sales rep dan team leader", outcome: "Kerangka mindset dan teknik closing untuk pasar Indonesia.", price: "Coming Soon", featured: false, status: "coming" },
+  { type: "Coming Soon", img: courseImg, title: "Leadership & Adab Program", who: "Manager – C-Level", outcome: "Modul leadership berbasis adab, ilmu, dan dampak.", price: "Coming Soon", featured: false, status: "coming" },
+  { type: "Coming Soon", img: ebookImg, title: "People Development Starter Pack", who: "HR yang baru memulai", outcome: "Bundle digital books, template, dan materi pendukung.", price: "Coming Soon", featured: false, status: "coming" },
 ];
 
 const membership = [
@@ -61,7 +61,7 @@ const Academy = () => {
               Pengetahuan korporasi, <span className="italic text-gradient-gold">untuk siapa saja</span> yang ingin bertumbuh.
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-xl leading-relaxed">
-              E-book, webinar, online course, dan membership yang disusun dari pengalaman lapangan mendampingi organisasi dan profesional Indonesia.
+              Digital books, mini masterclass, webinar, dan materi pembelajaran yang disusun dari pengalaman lapangan dalam communication, mindset, leadership, dan people development.
             </p>
             <div className="mt-9 flex flex-wrap gap-4">
               <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-gold h-14 px-8 font-semibold">
@@ -145,7 +145,7 @@ const Academy = () => {
               <h2 className="font-serif text-4xl md:text-5xl">Pilih format yang paling cocok untuk Anda.</h2>
             </div>
             <div className="flex gap-2 flex-wrap">
-              {["Semua","E-book","Course","Bundle","Webinar"].map((f, i) => (
+              {["Semua","Digital Book","Mini Masterclass","Webinar","Coming Soon"].map((f, i) => (
                 <button key={f} className={`px-4 py-2 text-sm rounded-full border transition-colors ${i===0?"bg-primary text-primary-foreground border-primary":"border-border text-muted-foreground hover:text-foreground"}`}>{f}</button>
               ))}
             </div>
@@ -166,8 +166,12 @@ const Academy = () => {
                     <div><span className="text-foreground/70 font-medium">Outcome:</span> {p.outcome}</div>
                   </div>
                   <div className="flex items-center justify-between pt-5 border-t border-border">
-                    <span className="font-serif text-2xl text-foreground">{p.price}</span>
-                    <Button size="sm" className="bg-signal text-signal-foreground hover:bg-signal/90 font-semibold">Beli Sekarang</Button>
+                    <span className="font-serif text-base text-muted-foreground">{p.price}</span>
+                    {p.status === "coming" ? (
+                      <Button size="sm" variant="outline" className="font-semibold">Gabung Waiting List</Button>
+                    ) : (
+                      <Button size="sm" className="bg-signal text-signal-foreground hover:bg-signal/90 font-semibold">Lihat Detail</Button>
+                    )}
                   </div>
                 </div>
               </div>
@@ -198,16 +202,15 @@ const Academy = () => {
                     <span className="font-serif text-2xl">Inner Circle Faisal Maulana</span>
                   </div>
                   <div className="flex items-baseline gap-2 mb-6">
-                    <span className="font-serif text-5xl text-gradient-gold">Rp 299rb</span>
-                    <span className="text-muted-foreground">/ bulan</span>
+                    <span className="font-serif text-3xl text-gradient-gold">Coming Soon</span>
                   </div>
                   <ul className="space-y-3 mb-8">
                     {membership.map((m, i) => (
                       <li key={i} className="flex gap-3 text-sm"><Check className="w-5 h-5 text-primary flex-shrink-0" /> {m}</li>
                     ))}
                   </ul>
-                  <Button size="lg" className="w-full bg-gradient-gold text-primary-foreground shadow-gold h-13">Bergabung Sekarang</Button>
-                  <div className="text-xs text-muted-foreground text-center mt-4">Bisa berhenti kapan saja • Garansi 30 hari</div>
+                  <Button size="lg" className="w-full bg-gradient-gold text-primary-foreground shadow-gold h-13">Gabung Waiting List</Button>
+                  <div className="text-xs text-muted-foreground text-center mt-4">Pendaftaran dibuka secara bertahap</div>
                 </div>
               </div>
             </div>

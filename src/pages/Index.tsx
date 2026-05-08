@@ -35,31 +35,31 @@ const addieStages = [
 
 const signaturePrograms = [
   {
-    title: "Adab & Science Leadership Mastery",
-    desc: "Program kepemimpinan untuk membangun leader yang adaptif, berintegritas, komunikatif, dan mampu menggerakkan tim.",
-    target: "Manager, Supervisor, Leader, C-Level",
-  },
-  {
-    title: "Transformational Sales & Mindset Champion",
-    desc: "Program untuk membangun sales team yang disiplin, percaya diri, customer-centric, dan berorientasi pada hasil jangka panjang.",
+    title: "Sales & Marketing Champion",
+    desc: "Program untuk membangun tim sales yang lebih disiplin, percaya diri, customer-centric, dan konsisten mengejar target dengan pendekatan yang terarah.",
     target: "Sales Team, Business Development, Marketing Team",
   },
   {
-    title: "Experiential People Development Architect",
-    desc: "Program untuk HR, L&D, dan internal trainer dalam merancang proses people development yang lebih sistematis dan berdampak.",
-    target: "HR, L&D, Internal Trainer",
+    title: "Impactful Communication Skill",
+    desc: "Program untuk memperkuat cara menyampaikan pesan, mendengarkan, membangun engagement, dan menciptakan kolaborasi yang lebih efektif.",
+    target: "Leader, Staff, Frontliner, Professional",
   },
   {
-    title: "Executive Transformation Journey",
-    desc: "Coaching dan pendampingan premium untuk leader yang ingin memperkuat kapasitas personal, kepemimpinan, dan dampak organisasi.",
-    target: "Executive, Founder, Senior Leader",
+    title: "Transformational Leadership Mastery",
+    desc: "Program untuk membantu leader menggerakkan tim, membangun kepercayaan, memperkuat mindset, dan menerjemahkan strategi menjadi aksi.",
+    target: "Manager, Supervisor, Leader",
+  },
+  {
+    title: "Team Synergy & Trust Building",
+    desc: "Program untuk memperkuat kepercayaan, kolaborasi, komunikasi tim, dan energi kerja bersama melalui aktivitas experiential.",
+    target: "Team, Division, Organization",
   },
 ];
 
 const academyTeasers = [
-  { img: ebookImg, badge: "E-book", title: "ADDIE + Adab: People Development Blueprint", price: "Rp 149.000", outcome: "Kerangka kerja siap pakai untuk HR & L&D." },
-  { img: courseImg, badge: "Online Course", title: "Adab & Science Leadership Mastery", price: "Rp 1.999.000", outcome: "Modul leadership untuk manager hingga C-Level." },
-  { img: webinarImg, badge: "Live Webinar", title: "High-Performance Team with Adab Values", price: "Rp 299.000", outcome: "Sesi 90 menit live + materi pendukung." },
+  { img: ebookImg, badge: "Digital Book", title: "Public Speaking Pro", price: "Lihat Detail", outcome: "Panduan untuk membangun kepercayaan diri, menyusun pesan, dan menjadikan public speaking sebagai aset karier dan bisnis." },
+  { img: ebookImg, badge: "Digital Book", title: "Defeat Demotivation", price: "Lihat Detail", outcome: "Panduan untuk mengatasi demotivasi, membangun kembali energi kerja, dan memperkuat mindset pertumbuhan." },
+  { img: webinarImg, badge: "Mini Masterclass", title: "Mini Masterclass Public Speaking", price: "Lihat Detail", outcome: "Program singkat untuk mengatasi rasa takut bicara di depan umum dan tampil lebih percaya diri." },
 ];
 
 const testimonials = [
@@ -76,7 +76,7 @@ const Index = () => {
         <div className="absolute inset-0">
           <img
             src={heroImg}
-            alt="Faisal Maulana — People Development Expert Indonesia"
+            alt="Faisal Maulana — Transformational People Development"
             className="w-full h-full object-cover object-[75%_center] md:object-[68%_center]"
             width={1920}
             height={1280}
@@ -100,7 +100,7 @@ const Index = () => {
             </h1>
 
             <p className="mt-6 text-base md:text-lg text-foreground/80 max-w-xl leading-relaxed">
-              Faisal Maulana membantu organisasi menciptakan perubahan perilaku yang nyata melalui pendekatan ADDIE, experiential learning, dan nilai adab yang relevan dengan dunia kerja modern.
+              Melalui ADDIE + ADAB Framework, Faisal Maulana membantu organisasi menjembatani strategi, perilaku, dan dampak bisnis secara lebih terarah.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -108,7 +108,7 @@ const Index = () => {
                 <Link to="/contact">Konsultasi Gratis <ArrowRight className="ml-2 w-4 h-4" /></Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="h-13 px-7 border-foreground/25 bg-background/40 backdrop-blur-sm hover:border-primary hover:bg-primary/10">
-                <Link to="/corporate">Lihat Signature Programs</Link>
+                <Link to="/academy">Jelajahi Academy</Link>
               </Button>
             </div>
 
@@ -156,7 +156,7 @@ const Index = () => {
             </h2>
             <div className="mx-auto my-8 h-px w-16 bg-gradient-to-r from-transparent via-primary to-transparent" />
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Banyak organisasi memiliki visi besar, target ambisius, dan strategi yang matang. Namun transformasi sering berhenti di ruang meeting karena tidak turun menjadi perilaku harian. Di sinilah pengembangan manusia harus dirancang secara lebih serius: menyentuh mindset, komunikasi, kolaborasi, dan cara kerja tim.
+              Banyak organisasi memiliki visi besar, target ambisius, dan strategi yang matang. Namun transformasi sering berhenti di ruang meeting karena tidak turun menjadi perilaku harian. Di sinilah pengembangan manusia perlu dirancang lebih serius: menyentuh mindset, komunikasi, kolaborasi, dan cara kerja tim.
             </p>
             <p className="font-serif text-xl md:text-2xl text-foreground/90 italic mt-8 leading-snug">
               "Transformasi bukan dimulai dari materi training, tetapi dari perilaku yang benar-benar berubah."
@@ -185,12 +185,12 @@ const Index = () => {
             <div className="lg:col-span-7">
               <div className="eyebrow mb-3">Metodologi</div>
               <h2 className="font-serif text-4xl md:text-5xl leading-tight">
-                Kerangka <span className="text-gradient-gold">ADDIE + Adab</span> — proses transformasi yang sistematis.
+                <span className="text-gradient-gold">ADDIE + ADAB Framework</span> — proses transformasi yang sistematis.
               </h2>
             </div>
             <div className="lg:col-span-5">
               <p className="text-muted-foreground leading-relaxed">
-                Setiap program dirancang melalui proses ilmiah yang membantu organisasi memahami kebutuhan, mendesain solusi, menjalankan pembelajaran, dan mengevaluasi dampaknya.
+                ADDIE memastikan program dirancang secara terstruktur. ADAB memastikan pembelajaran terhubung dengan nilai, perubahan perilaku, dan dampak bisnis.
               </p>
             </div>
           </div>
@@ -209,6 +209,30 @@ const Index = () => {
               </div>
             ))}
           </div>
+
+          {/* ADAB mini block */}
+          <div className="mt-8 card-premium p-7 md:p-8">
+            <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
+              <h3 className="font-serif text-2xl md:text-3xl">
+                <span className="text-gradient-gold">ADAB</span> sebagai jembatan dampak
+              </h3>
+              <span className="text-xs uppercase tracking-[0.2em] text-primary">Align • Design • Activate • Bridge</span>
+            </div>
+            <div className="grid md:grid-cols-4 gap-4">
+              {[
+                { l: "A", t: "Align", d: "Penyelarasan strategis" },
+                { l: "D", t: "Design", d: "Perancangan terfokus" },
+                { l: "A", t: "Activate", d: "Pengaktifan perilaku" },
+                { l: "B", t: "Bridge", d: "Penjembatanan ke dampak bisnis" },
+              ].map((x, i) => (
+                <div key={i} className="rounded-xl border border-border/60 p-5 bg-background/40">
+                  <div className="font-serif text-2xl text-primary mb-1">{x.l}</div>
+                  <div className="font-medium text-sm">{x.t}</div>
+                  <div className="text-xs text-muted-foreground mt-1">{x.d}</div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
@@ -222,11 +246,11 @@ const Index = () => {
               Dengarkan langsung filosofi transformasi dari <span className="text-gradient-gold">Faisal Maulana.</span>
             </h2>
             <p className="text-muted-foreground mt-5 leading-relaxed">
-              Sebuah pengantar singkat tentang bagaimana Adab, Science, dan Impact menjadi dasar dalam merancang program pengembangan manusia.
+              Sebuah pengantar singkat tentang bagaimana Adab, Science, dan Impact menjadi dasar dalam merancang proses pengembangan manusia.
             </p>
             <ul className="mt-6 space-y-3 text-sm text-foreground/85">
               <li className="flex gap-3"><span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" /> Mengapa training harus dimulai dari diagnosis.</li>
-              <li className="flex gap-3"><span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" /> Bagaimana ADDIE membantu program lebih terarah.</li>
+              <li className="flex gap-3"><span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" /> Bagaimana ADDIE + ADAB Framework membantu program lebih terarah.</li>
               <li className="flex gap-3"><span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" /> Mengapa adab penting dalam kepemimpinan dan budaya kerja.</li>
             </ul>
             <Button asChild className="mt-7 bg-gradient-gold text-primary-foreground shadow-gold">
@@ -247,15 +271,15 @@ const Index = () => {
         </div>
         <div className="container-wide">
           <div className="text-center max-w-3xl mx-auto mb-14">
-            <div className="eyebrow mb-3">Signature Programs</div>
-            <h2 className="font-serif text-4xl md:text-5xl leading-tight">Signature Programs untuk perubahan perilaku dan hasil bisnis.</h2>
-            <p className="text-muted-foreground mt-4">Dirancang untuk kebutuhan organisasi yang ingin training tidak berhenti sebagai acara, tetapi menjadi proses transformasi yang terarah.</p>
+            <div className="eyebrow mb-3">Program Utama</div>
+            <h2 className="font-serif text-4xl md:text-5xl leading-tight">Program utama untuk perubahan perilaku dan hasil bisnis.</h2>
+            <p className="text-muted-foreground mt-4">Dikembangkan dari pengalaman lapangan Faisal Maulana dalam sales, communication, leadership, team development, dan corporate learning.</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
             {signaturePrograms.map((s, i) => (
               <div key={i} className="card-premium p-7 flex flex-col group">
-                <div className="text-xs uppercase tracking-wider text-primary mb-3">0{i + 1} • Signature Program</div>
+                <div className="text-xs uppercase tracking-wider text-primary mb-3">0{i + 1} • Program Utama</div>
                 <h3 className="font-serif text-2xl md:text-3xl mb-3 leading-snug">{s.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed flex-1">{s.desc}</p>
                 <div className="mt-5 pt-5 border-t border-border/60 flex items-center justify-between gap-4">
@@ -272,7 +296,7 @@ const Index = () => {
 
           <div className="text-center mt-10">
             <Link to="/corporate" className="text-sm text-primary font-medium inline-flex items-center gap-2 hover:gap-3 transition-all">
-              Lihat semua program korporasi <ArrowRight className="w-4 h-4" />
+              Lihat Corporate Solutions <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
@@ -286,7 +310,7 @@ const Index = () => {
             <div className="max-w-2xl">
               <div className="text-xs uppercase tracking-[0.25em] text-surface-light-foreground/60 mb-3">Faisal Maulana Academy</div>
               <h2 className="font-serif text-4xl md:text-5xl leading-tight">Belajar kapan saja, dari mana saja — dengan kualitas korporasi.</h2>
-              <p className="text-surface-light-foreground/70 mt-4 max-w-xl">E-book, webinar, dan online course yang disusun dari pengalaman lapangan mendampingi organisasi dan profesional Indonesia.</p>
+              <p className="text-surface-light-foreground/70 mt-4 max-w-xl">Digital books dan mini masterclass yang diringkas dari pengalaman lapangan dalam communication, mindset, leadership, dan people development.</p>
             </div>
             <Button asChild size="lg" className="bg-signal text-signal-foreground hover:bg-signal/90 h-12 px-6 font-semibold">
               <Link to="/academy">Telusuri Academy <ArrowRight className="ml-2 w-4 h-4" /></Link>
@@ -304,8 +328,8 @@ const Index = () => {
                   <h3 className="font-serif text-xl mb-2 leading-snug">{p.title}</h3>
                   <p className="text-sm text-muted-foreground mb-5 leading-relaxed">{p.outcome}</p>
                   <div className="flex items-center justify-between">
-                    <span className="font-serif text-2xl text-foreground">{p.price}</span>
-                    <Button size="sm" className="bg-signal text-signal-foreground hover:bg-signal/90 font-semibold">Beli</Button>
+                    <span className="font-serif text-base text-muted-foreground">{p.price}</span>
+                    <Button size="sm" className="bg-signal text-signal-foreground hover:bg-signal/90 font-semibold">Lihat Produk</Button>
                   </div>
                 </div>
               </div>

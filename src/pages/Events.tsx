@@ -9,9 +9,9 @@ import bootcampImg from "@/assets/event-capacity-building.webp";
 
 const events = [
   { type: "Webinar Live", img: webinarImg, title: "High-Performance Team with Adab Values", date: "Coming Soon", time: "Diumumkan via email", location: "Online via Zoom", seats: "100 peserta", price: "Batch berikutnya segera dibuka", featured: true },
-  { type: "Public Workshop", img: workshopImg, title: "Transformational Sales & Mindset Champion — Public Class Jakarta", date: "Coming Soon", time: "Full day", location: "Jakarta", seats: "30 peserta", price: "Waiting list dibuka", featured: false },
+  { type: "Public Workshop", img: workshopImg, title: "Sales & Marketing Champion — Public Class Jakarta", date: "Coming Soon", time: "Full day", location: "Jakarta", seats: "30 peserta", price: "Waiting list dibuka", featured: false },
   { type: "Webinar Live", img: trainingImg, title: "People Development Architect for Growing Organizations", date: "Coming Soon", time: "Diumumkan via email", location: "Online via Zoom", seats: "200 peserta", price: "Batch berikutnya segera dibuka", featured: false },
-  { type: "Public Workshop", img: bootcampImg, title: "Adab & Science Leadership Bootcamp", date: "Coming Soon", time: "Full day", location: "Bandung / Bogor", seats: "25 peserta", price: "Waiting list dibuka", featured: false },
+  { type: "Public Workshop", img: bootcampImg, title: "Transformational Leadership Mastery — Bootcamp", date: "Coming Soon", time: "Full day", location: "Bandung / Bogor", seats: "25 peserta", price: "Waiting list dibuka", featured: false },
 ];
 
 const Events = () => (

@@ -10,16 +10,17 @@ import { toast } from "sonner";
 
 const segments = [
   { id: "corporate", icon: Building2, title: "Korporasi", desc: "HR, L&D, atau pengadaan training" },
-  { id: "individual", icon: User, title: "Individu", desc: "Tertarik dengan Academy atau membership" },
-  { id: "media", icon: Mic, title: "Media & Speaking", desc: "Wawancara, podcast, atau undangan acara" },
+  { id: "individual", icon: User, title: "Individu", desc: "Digital books, mini masterclass, atau membership" },
+  { id: "media", icon: Mic, title: "Media & Speaking", desc: "Wawancara, podcast, keynote, atau undangan acara" },
 ];
 
 const faqs = [
   { q: "Berapa lama waktu respon untuk pengajuan korporasi?", a: "Tim kami merespon dalam 1×24 jam kerja. Untuk diskusi diagnostik biasanya dijadwalkan dalam 5 hari kerja." },
   { q: "Apakah bisa training di luar Jawa?", a: "Ya. Kami melayani in-house training di seluruh Indonesia, termasuk format hybrid dan sepenuhnya online." },
   { q: "Apakah materi disesuaikan dengan industri kami?", a: "Selalu. Setiap program dimulai dari Training Needs Analysis sehingga konten, studi kasus, dan bahasa disesuaikan dengan konteks Anda." },
-  { q: "Apakah ada garansi untuk produk Academy?", a: "Ya. Setiap produk digital memiliki garansi 7 hari uang kembali, tanpa pertanyaan." },
-  { q: "Bisakah kami request sertifikasi?", a: "Bisa. Kami menyediakan sertifikasi internal yang dapat dimasukkan dalam learning record karyawan." },
+  { q: "Apakah pendekatan ADDIE + ADAB Framework bisa disesuaikan?", a: "Bisa. Kerangka ini kami sesuaikan dengan industri, level peserta, dan target perubahan organisasi Anda." },
+  { q: "Apakah ada evaluasi pasca-training?", a: "Ya. Setiap program dilengkapi pre/post assessment, action plan, dan rekomendasi tindak lanjut." },
+  { q: "Apakah tersedia produk digital untuk individu?", a: "Tersedia digital books seperti Public Speaking Pro dan Defeat Demotivation, serta Mini Masterclass Public Speaking." },
 ];
 
 const Contact = () => {
@@ -38,7 +39,7 @@ const Contact = () => {
         <div className="container-wide text-center max-w-3xl mx-auto">
           <div className="eyebrow mb-4">Hubungi Kami</div>
           <h1 className="font-serif text-5xl md:text-6xl leading-tight">Mari mulai dari satu <em className="text-gradient-gold not-italic">percakapan yang baik.</em></h1>
-          <p className="mt-6 text-lg text-muted-foreground">Pilih jalur yang paling sesuai dengan kebutuhan Anda. Kami akan merespon dengan perhatian penuh.</p>
+          <p className="mt-6 text-lg text-muted-foreground">Ceritakan kebutuhan organisasi atau pembelajaran Anda. Kami akan membantu memetakan apakah kebutuhannya berada pada corporate training, digital books, mini masterclass, speaking engagement, atau program people development lainnya.</p>
         </div>
       </section>
 
@@ -97,7 +98,7 @@ const Contact = () => {
                         <div><Label>Kebutuhan Pelatihan</Label>
                           <Select required>
                             <SelectTrigger className="mt-2 h-12"><SelectValue placeholder="Pilih fokus utama" /></SelectTrigger>
-                            <SelectContent>{["Sales & Marketing","Leadership","Team Building","Service Excellence","Communication","Negotiation","Konsultasi Strategi"].map(x => <SelectItem key={x} value={x}>{x}</SelectItem>)}</SelectContent>
+                            <SelectContent>{["Sales & Marketing","Communication Skill","Leadership","Team Synergy","Service Excellence","Mindset & Motivation","Negotiation","Company Gathering / Kick-Off","People Development System"].map(x => <SelectItem key={x} value={x}>{x}</SelectItem>)}</SelectContent>
                           </Select>
                         </div>
                         <div><Label>Estimasi Timeline</Label>
@@ -155,7 +156,7 @@ const Contact = () => {
                     <div><Label>Minat Anda</Label>
                       <Select required>
                         <SelectTrigger className="mt-2 h-12"><SelectValue placeholder="Pilih kategori" /></SelectTrigger>
-                        <SelectContent>{["E-book","Online Course","Webinar","Membership","Coaching 1-on-1"].map(x => <SelectItem key={x} value={x}>{x}</SelectItem>)}</SelectContent>
+                        <SelectContent>{["Digital Book","Mini Masterclass","Webinar","Membership","Pendampingan 1-on-1"].map(x => <SelectItem key={x} value={x}>{x}</SelectItem>)}</SelectContent>
                       </Select>
                     </div>
                     <div><Label>Pesan (opsional)</Label><Textarea className="mt-2 min-h-[100px]" /></div>

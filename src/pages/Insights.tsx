@@ -27,6 +27,8 @@ const articles = [
   { img: webinarImg, cat: "Komunikasi", title: "Storytelling untuk eksekutif: kapan data tidak cukup", read: "5 menit" },
   { img: portrait, cat: "Produktivitas", title: "Barakah time management: produktivitas tanpa kehilangan ketenangan", read: "6 menit" },
   { img: workshopImg, cat: "Service Excellence", title: "Mengubah SOP layanan menjadi pengalaman yang dirindukan pelanggan", read: "7 menit" },
+  { img: ebookImg, cat: "People Development", title: "ADDIE + ADAB Framework: cara merancang training yang berdampak", read: "8 menit" },
+  { img: courseImg, cat: "Komunikasi", title: "Public Speaking Pro: mengubah kemampuan bicara menjadi aset karier", read: "6 menit" },
 ];
 
 const leadMagnets = [
