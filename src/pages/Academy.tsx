@@ -166,8 +166,12 @@ const Academy = () => {
                     <div><span className="text-foreground/70 font-medium">Outcome:</span> {p.outcome}</div>
                   </div>
                   <div className="flex items-center justify-between pt-5 border-t border-border">
-                    <span className="font-serif text-2xl text-foreground">{p.price}</span>
-                    <Button size="sm" className="bg-signal text-signal-foreground hover:bg-signal/90 font-semibold">Beli Sekarang</Button>
+                    <span className="font-serif text-base text-muted-foreground">{p.price}</span>
+                    {p.status === "coming" ? (
+                      <Button size="sm" variant="outline" className="font-semibold">Gabung Waiting List</Button>
+                    ) : (
+                      <Button size="sm" className="bg-signal text-signal-foreground hover:bg-signal/90 font-semibold">Lihat Detail</Button>
+                    )}
                   </div>
                 </div>
               </div>
