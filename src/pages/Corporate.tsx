@@ -14,19 +14,19 @@ const painPoints = [
 ];
 
 const signaturePrograms = [
-  { title: "Adab & Science Leadership Mastery", desc: "Program kepemimpinan untuk membangun leader yang adaptif, berintegritas, komunikatif, dan mampu menggerakkan tim.", target: "Manager, Supervisor, Leader, C-Level" },
-  { title: "Transformational Sales & Mindset Champion", desc: "Program untuk membangun sales team yang disiplin, percaya diri, customer-centric, dan berorientasi pada hasil jangka panjang.", target: "Sales Team, Business Development, Marketing Team" },
-  { title: "Experiential People Development Architect", desc: "Program untuk HR, L&D, dan internal trainer dalam merancang proses people development yang lebih sistematis dan berdampak.", target: "HR, L&D, Internal Trainer" },
-  { title: "Executive Transformation Journey", desc: "Coaching dan pendampingan premium untuk leader yang ingin memperkuat kapasitas personal, kepemimpinan, dan dampak organisasi.", target: "Executive, Founder, Senior Leader" },
+  { title: "Sales & Marketing Champion", desc: "Program untuk membangun tim sales yang lebih disiplin, percaya diri, customer-centric, dan konsisten mengejar target dengan pendekatan yang terarah.", target: "Sales Team, Business Development, Marketing Team" },
+  { title: "Impactful Communication Skill", desc: "Program untuk memperkuat cara menyampaikan pesan, mendengarkan, membangun engagement, dan menciptakan kolaborasi yang lebih efektif.", target: "Leader, Staff, Frontliner, Professional" },
+  { title: "Transformational Leadership Mastery", desc: "Program untuk membantu leader menggerakkan tim, membangun kepercayaan, memperkuat mindset, dan menerjemahkan strategi menjadi aksi.", target: "Manager, Supervisor, Leader" },
+  { title: "Team Synergy & Trust Building", desc: "Program untuk memperkuat kepercayaan, kolaborasi, komunikasi tim, dan energi kerja bersama melalui aktivitas experiential.", target: "Team, Division, Organization" },
 ];
 
 const supportingModules = [
-  "Service Excellence Culture",
-  "Impactful Business Communication",
-  "Team Synergy & Trust Building",
-  "Principled Negotiation",
-  "Growth Mindset & Motivation",
-  "Company Kick-Off & Gathering",
+  "Strong Mindset & Motivation",
+  "Service Excellence",
+  "Negotiation & Persuasion",
+  "Company Gathering & Kick-Off",
+  "Financial Mastery",
+  "Team Engagement Breakthrough",
 ];
 
 const process = [
@@ -56,7 +56,7 @@ const Corporate = () => (
               <Link to="/contact">Jadwalkan Diskusi Diagnostik <ArrowRight className="ml-2 w-4 h-4" /></Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="h-13 px-7 border-foreground/20">
-              <a href="#programs">Lihat Signature Programs</a>
+              <a href="#programs">Lihat Corporate Solutions</a>
             </Button>
           </div>
         </div>
@@ -102,17 +102,17 @@ const Corporate = () => (
       <div className="container-wide">
         <div className="grid lg:grid-cols-12 gap-12">
           <div className="lg:col-span-5 lg:sticky lg:top-32 self-start">
-            <div className="eyebrow mb-3">Logika Bisnis di Balik ADDIE</div>
+            <div className="eyebrow mb-3">ADDIE + ADAB Framework</div>
             <h2 className="font-serif text-4xl md:text-5xl leading-tight">Pendekatan ilmiah yang menghasilkan keputusan investasi yang cerdas.</h2>
-            <p className="text-muted-foreground mt-5">ADDIE menjadi scientific backbone setiap program — memastikan setiap rupiah yang diinvestasikan untuk pengembangan SDM bisa dipertanggungjawabkan.</p>
+            <p className="text-muted-foreground mt-5">ADDIE menjadi fondasi desain pembelajaran. ADAB menjadi jembatan agar pembelajaran bergerak menuju perubahan perilaku dan dampak bisnis.</p>
           </div>
           <div className="lg:col-span-7 space-y-4">
             {[
               { t: "Diagnosis sebelum desain", d: "Kami mulai dari data, bukan asumsi. Hasilnya: program yang tepat sasaran." },
               { t: "Desain modular & kontekstual", d: "Konten disesuaikan dengan industri, level, dan bahasa internal organisasi Anda." },
               { t: "Pengembangan dengan studi kasus nyata", d: "Peserta belajar memecahkan masalah yang akan mereka temui di pekerjaan sehari-hari." },
-              { t: "Implementasi dengan reinforcement", d: "Action learning project, coaching, dan komunitas pasca-program." },
-              { t: "Evaluasi 4 level Kirkpatrick", d: "Reaksi, pembelajaran, perilaku, dan hasil — semua dievaluasi secara terstruktur." },
+              { t: "Implementasi dengan reinforcement", d: "Action learning project, pendampingan, dan komunitas pasca-program." },
+              { t: "Evaluasi melalui assessment, report, dan tindak lanjut", d: "Pre/post assessment, feedback, dan rekomendasi tindak lanjut yang terukur." },
             ].map((x, i) => (
               <div key={i} className="card-premium p-6 flex gap-5">
                 <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
@@ -155,13 +155,14 @@ const Corporate = () => (
     <section id="programs" className="section-padding">
       <div className="container-wide">
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="eyebrow mb-3">Signature Corporate Programs</div>
-          <h2 className="font-serif text-4xl md:text-5xl">Empat program utama yang menjadi fondasi transformasi manusia dalam organisasi.</h2>
+          <div className="eyebrow mb-3">Corporate Solutions</div>
+          <h2 className="font-serif text-4xl md:text-5xl">Program dapat disesuaikan dengan kebutuhan organisasi.</h2>
+          <p className="text-muted-foreground mt-4">Disesuaikan dengan industri, level peserta, dan target perubahan yang ingin dicapai.</p>
         </div>
         <div className="grid md:grid-cols-2 gap-6">
           {signaturePrograms.map((p, i) => (
             <div key={i} className="card-premium p-7 flex flex-col">
-              <div className="text-xs uppercase tracking-wider text-primary mb-3">0{i + 1} • Signature Program</div>
+              <div className="text-xs uppercase tracking-wider text-primary mb-3">0{i + 1} • Signature Corporate Program</div>
               <h3 className="font-serif text-2xl md:text-3xl mb-3 leading-snug">{p.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed flex-1">{p.desc}</p>
               <div className="mt-5 pt-5 border-t border-border/60 flex items-center justify-between gap-4">
@@ -178,7 +179,7 @@ const Corporate = () => (
         <div className="mt-16">
           <div className="text-center max-w-2xl mx-auto mb-8">
             <div className="eyebrow mb-3">Supporting Modules</div>
-            <h3 className="font-serif text-2xl md:text-3xl">Modul pendukung yang dapat dikombinasikan dengan signature program.</h3>
+            <h3 className="font-serif text-2xl md:text-3xl">Modul pendukung yang dapat dikombinasikan dengan program utama.</h3>
           </div>
           <div className="flex flex-wrap justify-center gap-3">
             {supportingModules.map((m, i) => (
