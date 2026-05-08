@@ -145,7 +145,7 @@ const Academy = () => {
               <h2 className="font-serif text-4xl md:text-5xl">Pilih format yang paling cocok untuk Anda.</h2>
             </div>
             <div className="flex gap-2 flex-wrap">
-              {["Semua","E-book","Course","Bundle","Webinar"].map((f, i) => (
+              {["Semua","Digital Book","Mini Masterclass","Webinar","Coming Soon"].map((f, i) => (
                 <button key={f} className={`px-4 py-2 text-sm rounded-full border transition-colors ${i===0?"bg-primary text-primary-foreground border-primary":"border-border text-muted-foreground hover:text-foreground"}`}>{f}</button>
               ))}
             </div>
@@ -210,8 +210,8 @@ const Academy = () => {
                       <li key={i} className="flex gap-3 text-sm"><Check className="w-5 h-5 text-primary flex-shrink-0" /> {m}</li>
                     ))}
                   </ul>
-                  <Button size="lg" className="w-full bg-gradient-gold text-primary-foreground shadow-gold h-13">Bergabung Sekarang</Button>
-                  <div className="text-xs text-muted-foreground text-center mt-4">Bisa berhenti kapan saja • Garansi 30 hari</div>
+                  <Button size="lg" className="w-full bg-gradient-gold text-primary-foreground shadow-gold h-13">Gabung Waiting List</Button>
+                  <div className="text-xs text-muted-foreground text-center mt-4">Pendaftaran dibuka secara bertahap</div>
                 </div>
               </div>
             </div>
