@@ -209,6 +209,30 @@ const Index = () => {
               </div>
             ))}
           </div>
+
+          {/* ADAB mini block */}
+          <div className="mt-8 card-premium p-7 md:p-8">
+            <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
+              <h3 className="font-serif text-2xl md:text-3xl">
+                <span className="text-gradient-gold">ADAB</span> sebagai jembatan dampak
+              </h3>
+              <span className="text-xs uppercase tracking-[0.2em] text-primary">Align • Design • Activate • Bridge</span>
+            </div>
+            <div className="grid md:grid-cols-4 gap-4">
+              {[
+                { l: "A", t: "Align", d: "Penyelarasan strategis" },
+                { l: "D", t: "Design", d: "Perancangan terfokus" },
+                { l: "A", t: "Activate", d: "Pengaktifan perilaku" },
+                { l: "B", t: "Bridge", d: "Penjembatanan ke dampak bisnis" },
+              ].map((x, i) => (
+                <div key={i} className="rounded-xl border border-border/60 p-5 bg-background/40">
+                  <div className="font-serif text-2xl text-primary mb-1">{x.l}</div>
+                  <div className="font-medium text-sm">{x.t}</div>
+                  <div className="text-xs text-muted-foreground mt-1">{x.d}</div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
@@ -222,11 +246,11 @@ const Index = () => {
               Dengarkan langsung filosofi transformasi dari <span className="text-gradient-gold">Faisal Maulana.</span>
             </h2>
             <p className="text-muted-foreground mt-5 leading-relaxed">
-              Sebuah pengantar singkat tentang bagaimana Adab, Science, dan Impact menjadi dasar dalam merancang program pengembangan manusia.
+              Sebuah pengantar singkat tentang bagaimana Adab, Science, dan Impact menjadi dasar dalam merancang proses pengembangan manusia.
             </p>
             <ul className="mt-6 space-y-3 text-sm text-foreground/85">
               <li className="flex gap-3"><span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" /> Mengapa training harus dimulai dari diagnosis.</li>
-              <li className="flex gap-3"><span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" /> Bagaimana ADDIE membantu program lebih terarah.</li>
+              <li className="flex gap-3"><span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" /> Bagaimana ADDIE + ADAB Framework membantu program lebih terarah.</li>
               <li className="flex gap-3"><span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" /> Mengapa adab penting dalam kepemimpinan dan budaya kerja.</li>
             </ul>
             <Button asChild className="mt-7 bg-gradient-gold text-primary-foreground shadow-gold">
@@ -247,9 +271,9 @@ const Index = () => {
         </div>
         <div className="container-wide">
           <div className="text-center max-w-3xl mx-auto mb-14">
-            <div className="eyebrow mb-3">Signature Programs</div>
-            <h2 className="font-serif text-4xl md:text-5xl leading-tight">Signature Programs untuk perubahan perilaku dan hasil bisnis.</h2>
-            <p className="text-muted-foreground mt-4">Dirancang untuk kebutuhan organisasi yang ingin training tidak berhenti sebagai acara, tetapi menjadi proses transformasi yang terarah.</p>
+            <div className="eyebrow mb-3">Program Utama</div>
+            <h2 className="font-serif text-4xl md:text-5xl leading-tight">Program utama untuk perubahan perilaku dan hasil bisnis.</h2>
+            <p className="text-muted-foreground mt-4">Dikembangkan dari pengalaman lapangan Faisal Maulana dalam sales, communication, leadership, team development, dan corporate learning.</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
