@@ -279,7 +279,7 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-6">
             {signaturePrograms.map((s, i) => (
               <div key={i} className="card-premium p-7 flex flex-col group">
-                <div className="text-xs uppercase tracking-wider text-primary mb-3">0{i + 1} • Signature Program</div>
+                <div className="text-xs uppercase tracking-wider text-primary mb-3">0{i + 1} • Program Utama</div>
                 <h3 className="font-serif text-2xl md:text-3xl mb-3 leading-snug">{s.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed flex-1">{s.desc}</p>
                 <div className="mt-5 pt-5 border-t border-border/60 flex items-center justify-between gap-4">
