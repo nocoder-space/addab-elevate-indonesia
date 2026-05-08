@@ -202,8 +202,7 @@ const Academy = () => {
                     <span className="font-serif text-2xl">Inner Circle Faisal Maulana</span>
                   </div>
                   <div className="flex items-baseline gap-2 mb-6">
-                    <span className="font-serif text-5xl text-gradient-gold">Rp 299rb</span>
-                    <span className="text-muted-foreground">/ bulan</span>
+                    <span className="font-serif text-3xl text-gradient-gold">Coming Soon</span>
                   </div>
                   <ul className="space-y-3 mb-8">
                     {membership.map((m, i) => (
