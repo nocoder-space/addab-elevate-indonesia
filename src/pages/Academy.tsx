@@ -33,17 +33,19 @@ const Academy = () => {
   const [days, setDays] = useState(0);
   const [hours, setHours] = useState(0);
   const [mins, setMins] = useState(0);
+  const [secs, setSecs] = useState(0);
 
   useEffect(() => {
-    const target = new Date(); target.setDate(target.getDate() + 9);
+    const target = new Date(); target.setDate(target.getDate() + 9); target.setHours(19,0,0,0);
     const tick = () => {
       const diff = +target - +new Date();
       setDays(Math.max(0, Math.floor(diff / 86400000)));
       setHours(Math.max(0, Math.floor((diff % 86400000) / 3600000)));
       setMins(Math.max(0, Math.floor((diff % 3600000) / 60000)));
+      setSecs(Math.max(0, Math.floor((diff % 60000) / 1000)));
     };
     tick();
-    const id = setInterval(tick, 60000);
+    const id = setInterval(tick, 1000);
     return () => clearInterval(id);
   }, []);
 
