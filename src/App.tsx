@@ -10,6 +10,7 @@ import Corporate from "./pages/Corporate";
 import Academy from "./pages/Academy";
 import About from "./pages/About";
 import Insights from "./pages/Insights";
+import InsightDetail from "./pages/InsightDetail";
 import Events from "./pages/Events";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -30,6 +31,7 @@ const App = () => (
             <Route path="/academy" element={<Academy />} />
             <Route path="/about" element={<About />} />
             <Route path="/insights" element={<Insights />} />
+            <Route path="/insights/:slug" element={<InsightDetail />} />
             <Route path="/events" element={<Events />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
