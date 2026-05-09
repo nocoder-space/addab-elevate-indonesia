@@ -103,21 +103,36 @@ const Academy = () => {
       </section>
 
       {/* WEBINAR BANNER */}
-      <section className="bg-card border-y border-border py-10">
-        <div className="container-wide flex flex-col md:flex-row items-center justify-between gap-6">
-          <div>
-            <div className="text-xs uppercase tracking-[0.25em] text-primary mb-2 font-semibold">Webinar Live Berikutnya</div>
+      <section className="bg-card border-y border-border py-10 relative overflow-hidden">
+        <div className="absolute inset-0 -z-10 bg-gradient-radial-gold opacity-30 pointer-events-none" />
+        <div className="container-wide flex flex-col lg:flex-row items-center justify-between gap-8">
+          <div className="text-center lg:text-left">
+            <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-primary mb-2 font-semibold">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary" />
+              </span>
+              Webinar Live Berikutnya
+            </div>
             <h3 className="font-serif text-2xl md:text-3xl">High-Performance Team with Adab Values</h3>
-            <p className="text-sm text-muted-foreground mt-1">Batch berikutnya segera dibuka • Notifikasi via email</p>
+            <p className="text-sm text-muted-foreground mt-1">Kuota terbatas • Notifikasi via email saat batch dibuka</p>
           </div>
-          <div className="flex items-center gap-3">
-            {[{n:days,l:"Hari"},{n:hours,l:"Jam"},{n:mins,l:"Menit"}].map(x => (
-              <div key={x.l} className="bg-background border border-border rounded-xl px-5 py-3 text-center min-w-[80px]">
-                <div className="font-serif text-3xl text-primary">{String(x.n).padStart(2,'0')}</div>
-                <div className="text-[10px] uppercase tracking-wider text-muted-foreground">{x.l}</div>
-              </div>
-            ))}
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 h-14 ml-2 font-semibold shadow-gold">Daftar Waiting List</Button>
+          <div className="flex flex-col sm:flex-row items-center gap-4">
+            <div className="flex items-center gap-2">
+              {[{n:days,l:"Hari"},{n:hours,l:"Jam"},{n:mins,l:"Menit"},{n:secs,l:"Detik"}].map(x => (
+                <div key={x.l} className="bg-background border border-primary/30 rounded-xl px-3 sm:px-4 py-3 text-center min-w-[64px] shadow-card">
+                  <div className="font-serif text-2xl sm:text-3xl text-primary tabular-nums">{String(x.n).padStart(2,'0')}</div>
+                  <div className="text-[9px] sm:text-[10px] uppercase tracking-wider text-muted-foreground mt-0.5">{x.l}</div>
+                </div>
+              ))}
+            </div>
+            <Button
+              size="lg"
+              className="relative h-14 px-8 bg-gradient-gold text-primary-foreground hover:scale-[1.03] active:scale-100 transition-transform font-bold uppercase tracking-wider shadow-gold ring-2 ring-primary/50 ring-offset-2 ring-offset-card animate-pulse"
+            >
+              <span className="absolute -top-2 -right-2 bg-signal text-signal-foreground text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full shadow-md">Gratis</span>
+              Daftar Waiting List <ArrowRight className="ml-2 w-4 h-4" />
+            </Button>
           </div>
         </div>
       </section>
