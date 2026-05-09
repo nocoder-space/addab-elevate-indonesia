@@ -3,19 +3,22 @@ import { useEffect, useState } from "react";
 import { ArrowRight, Clock, Users, Award, BookOpen, Video, Crown, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import VideoEmbed from "@/components/VideoEmbed";
-import ebookImg from "@/assets/ebook-mockup.jpg";
-import courseImg from "@/assets/course-mockup.jpg";
-import webinarImg from "@/assets/webinar-mockup.jpg";
+import ebookPublicSpeaking from "@/assets/ebook-public-speaking.jpg";
+import ebookDefeatDemotivation from "@/assets/ebook-defeat-demotivation.jpg";
+import masterclassPublicSpeaking from "@/assets/masterclass-public-speaking.jpg";
+import masterclassSalesPsychology from "@/assets/masterclass-sales-psychology.jpg";
+import programLeadershipAdab from "@/assets/program-leadership-adab.jpg";
+import bundlePeopleDevelopment from "@/assets/bundle-people-development.jpg";
 import socialBg from "@/assets/event-ballroom.webp";
 import membershipBg from "@/assets/event-roleplay.webp";
 
 const products = [
-  { type: "Digital Book", img: ebookImg, title: "Public Speaking Pro", who: "Profesional, leader, founder", outcome: "Membangun kepercayaan diri, menyusun pesan, dan menjadikan public speaking sebagai aset karier dan bisnis.", price: "Lihat Detail", featured: true, status: "active" },
-  { type: "Digital Book", img: ebookImg, title: "Defeat Demotivation", who: "Individu dan profesional", outcome: "Mengatasi demotivasi, membangun kembali energi kerja, dan memperkuat mindset pertumbuhan.", price: "Lihat Detail", featured: false, status: "active" },
-  { type: "Mini Masterclass", img: webinarImg, title: "Mini Masterclass Public Speaking", who: "Pemula yang ingin tampil percaya diri", outcome: "Mengatasi rasa takut bicara di depan umum, menyusun pesan, dan tampil lebih percaya diri.", price: "Lihat Detail", featured: true, status: "active" },
-  { type: "Coming Soon", img: courseImg, title: "Sales Psychology Masterclass", who: "Sales rep dan team leader", outcome: "Kerangka mindset dan teknik closing untuk pasar Indonesia.", price: "Coming Soon", featured: false, status: "coming" },
-  { type: "Coming Soon", img: courseImg, title: "Leadership & Adab Program", who: "Manager – C-Level", outcome: "Modul leadership berbasis adab, ilmu, dan dampak.", price: "Coming Soon", featured: false, status: "coming" },
-  { type: "Coming Soon", img: ebookImg, title: "People Development Starter Pack", who: "HR yang baru memulai", outcome: "Bundle digital books, template, dan materi pendukung.", price: "Coming Soon", featured: false, status: "coming" },
+  { type: "Digital Book", img: ebookPublicSpeaking, title: "Public Speaking Pro", who: "Profesional, leader, founder", outcome: "Membangun kepercayaan diri, menyusun pesan, dan menjadikan public speaking sebagai aset karier dan bisnis.", price: "Lihat Detail", featured: true, status: "active" },
+  { type: "Digital Book", img: ebookDefeatDemotivation, title: "Defeat Demotivation", who: "Individu dan profesional", outcome: "Mengatasi demotivasi, membangun kembali energi kerja, dan memperkuat mindset pertumbuhan.", price: "Lihat Detail", featured: false, status: "active" },
+  { type: "Mini Masterclass", img: masterclassPublicSpeaking, title: "Mini Masterclass Public Speaking", who: "Pemula yang ingin tampil percaya diri", outcome: "Mengatasi rasa takut bicara di depan umum, menyusun pesan, dan tampil lebih percaya diri.", price: "Lihat Detail", featured: true, status: "active" },
+  { type: "Coming Soon", img: masterclassSalesPsychology, title: "Sales Psychology Masterclass", who: "Sales rep dan team leader", outcome: "Kerangka mindset dan teknik closing untuk pasar Indonesia.", price: "Coming Soon", featured: false, status: "coming" },
+  { type: "Coming Soon", img: programLeadershipAdab, title: "Leadership & Adab Program", who: "Manager – C-Level", outcome: "Modul leadership berbasis adab, ilmu, dan dampak.", price: "Coming Soon", featured: false, status: "coming" },
+  { type: "Coming Soon", img: bundlePeopleDevelopment, title: "People Development Starter Pack", who: "HR yang baru memulai", outcome: "Bundle digital books, template, dan materi pendukung.", price: "Coming Soon", featured: false, status: "coming" },
 ];
 
 const membership = [
